@@ -3,6 +3,7 @@ console.log(pick)
 
 const pickSwiper = new Swiper(pick,{
     slidesPerView:5,
-    spaceBetween:20,
+    spaceBetween:40,
     centeredSlides:true,
+    initialSlide:2,
 })
