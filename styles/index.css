@@ -1,0 +1,199 @@
+#wrap {
+    max-width: 1920px; position: relative;
+    margin: 0 auto;
+}
+#wrap header {position: absolute; width: 100%; z-index: 100;}
+#wrap main {}
+#wrap footer {}
+/* -------------------------------------------------------헤더 시작 */
+#wrap header #head_contents {
+    display:flex; flex-flow:row nowrap; justify-content: space-between; align-items: center;
+    padding: 0 240px; height: 70px;
+}
+#wrap header #head_contents .head_left {
+    display: flex;
+}
+#wrap header #head_contents .head_left .logo {}
+#wrap header #head_contents .head_left .logo a {}
+#wrap header #head_contents .head_left .logo a img {}
+#wrap header #head_contents .head_left #gnb {
+    display: flex; gap: 40px;
+}
+#wrap header #head_contents .head_left #gnb li {}
+#wrap header #head_contents .head_left #gnb li a {
+    color: #fff; font-weight: 600; line-height: 1.5;
+}
+#wrap header #head_contents .head_right {
+    display: flex; flex-flow: row nowrap; align-items: center; gap:10px;
+}
+#wrap header #head_contents .head_right .search {}
+#wrap header #head_contents .head_right .search img {}
+#wrap header #head_contents .head_right .user {}
+#wrap header #head_contents .head_right .user img {}
+#wrap header #head_contents .head_right .like {}
+#wrap header #head_contents .head_right .like img {}
+#wrap header #head_contents .head_right .schedule {}
+#wrap header #head_contents .head_right .schedule img {scale: 1.1;}
+/* -------------------------------------------------------헤더 끝 */
+/* --------------------------------------------------------메인 시작 */
+#wrap #hero_wrap {
+    position: relative;height: 1080px;
+    margin-bottom: 160px;
+}
+#wrap #hero_wrap .hero_video {}
+#wrap #hero_wrap .hero_video section {}
+#wrap #hero_wrap .hero_video section video {width:100%;}
+#wrap #hero_wrap .hero_video .hero_txt {
+    position: absolute; top: 65%; left: 240px;
+}
+#wrap #hero_wrap .hero_video .hero_txt p,
+#wrap #hero_wrap .hero_video .hero_txt h2 {color: #fff; font-weight: 600;}
+#wrap #hero_wrap .hero_video .hero_txt p {font-size: 1.5rem; margin-bottom: 10px;}
+#wrap #hero_wrap .hero_video .hero_txt h2 {font-size: 2.88rem;}
+#wrap #hero_wrap .hero_list  {
+    width: 1560px;height:55px; display: flex; flex-flow: row nowrap;
+    justify-content: space-around;
+    position: absolute; bottom: 0;left: 50%;transform: translateX(-50%);
+    border-top-right-radius: 15px;
+}
+#wrap #hero_wrap .hero_list li  {
+    height: 100%; text-align: center;
+    width: calc(100% / 6); overflow: hidden;
+}
+#wrap #hero_wrap .hero_list li:nth-child(1) {border-top-left-radius: 15px;}
+#wrap #hero_wrap .hero_list li:last-child {border-top-right-radius: 15px;}
+#wrap #hero_wrap .hero_list .active  {background-color: #446CFF; opacity: 1;}
+#wrap #hero_wrap .hero_list li a {
+    display: inline-block; width: 100%; height: 100%;
+    color: #fff; line-height: 55px; background-color: #000;opacity: 0.6
+}
+/* --------------------------------------------------------테마별 여행 */
+#wrap .theme_category {
+    display:flex; flex-flow:row nowrap; justify-content: space-around;
+    margin-bottom:160px; padding: 0 50px;
+}
+#wrap .theme_category li {width: calc((100% / 6) - 24px);}
+#wrap .theme_category li a {}
+#wrap .theme_category li:nth-child(1) a {
+    background-image: url(../images/common/friend_theme.png); display: inline-block; width: 100%; height: 200px;
+}
+#wrap .theme_category li:nth-child(2) a {
+    background-image: url(../images/common/food_theme.png); display: inline-block; width: 100%; height: 200px;
+}
+#wrap .theme_category li:nth-child(3) a {
+    background-image: url(../images/common/solo_theme.png); display: inline-block; width: 100%; height: 200px;
+}
+#wrap .theme_category li:nth-child(4) a {
+    background-image: url(../images/common/couple_theme.png); display: inline-block; width: 100%; height: 200px;
+}
+#wrap .theme_category li:nth-child(5) a {
+    background-image: url(../images/common/activity_theme.png); display: inline-block; width: 100%; height: 200px;
+}
+#wrap .theme_category li:nth-child(6) a {
+    background-image: url(../images/common/healing_theme.png); display: inline-block; width: 100%; height: 200px;
+}
+#wrap .theme_category li a img {margin-bottom: 8px;}
+#wrap .theme_category li a p {
+    display:inline-block;  font-size: 1.13rem; font-weight:500;
+    width: 100%; text-align: center; background: rgba(0, 0, 0, 0.3); border-radius: 50px;
+    color: #fff; line-height: 200px;
+}
+/* ------------------------------------------------------봄 여행지 추천 */
+#wrap .spring2026 {text-align: center; width: 100%;}
+#wrap .spring2026 h1 {font-size: 2.13rem; margin-bottom: 50px;}
+#wrap .spring2026 h1 span {font-size: 2.38rem; color:#FF808C;}
+#wrap .spring2026 .swiper {overflow: visible;}
+#wrap .spring2026 .swiper .swiper-wrapper {display: flex; gap: 20px; justify-content: space-around; align-items: end;}
+#wrap .spring2026 .swiper .swiper-wrapper .swiper-slide {height: 460px; background-position: center; background-size: cover; border-radius: 30px;}
+#wrap .spring2026 .swiper .swiper-wrapper .swiper-slide-active {transform: scale(1.3); z-index: 10;}
+#wrap .spring2026 .pick {}
+#wrap .spring2026 .pick .swiper-wrapper .slide1 {background-image: url(../images/common/kyoto.png);}
+#wrap .spring2026 .pick .swiper-wrapper .slide2 {background-image: url(../images/common/rome.png);}
+#wrap .spring2026 .pick .swiper-wrapper .slide3 {background-image: url(../images/common/bangkok.png);}
+#wrap .spring2026 .pick .swiper-wrapper .slide4 {background-image: url(../images/common/amsterdam_tulip.png);}
+#wrap .spring2026 .pick .swiper-wrapper .slide5 {background-image: url(../images/common/kyoto.png);}
+#wrap .spring2026 .pick .swiper-wrapper .slide6 {background-image: url(../images/common/kyoto.png);}
+#wrap .spring2026 .pick .swiper-wrapper .slide7 {background-image: url(../images/common/kyoto.png);}
+#wrap .spring2026 .pick .swiper-wrapper .swiper-slide .spring_txt {
+    display: inline-block;
+}
+#wrap .spring2026 .spring_list li .spring_txt h2 {}
+#wrap .spring2026 .spring_list li .spring_txt p {}
+/* --------------------------------------------------------대륙별 여행지 추천 */
+#wrap .continent_suggest {}
+#wrap .continent_suggest h1 {}
+#wrap .continent_suggest .continent_list {}
+#wrap .continent_suggest .continent_list li {}
+#wrap .continent_suggest .suggest_contents {}
+#wrap .continent_suggest .suggest_contents .left_video {}
+#wrap .continent_suggest .suggest_contents .left_video section {}
+#wrap .continent_suggest .suggest_contents .left_video section video {}
+#wrap .continent_suggest .suggest_contents .left_video .video_txt {}
+#wrap .continent_suggest .suggest_contents .left_video .video_txt p {}
+#wrap .continent_suggest .suggest_contents .left_video .video_txt h2 {}
+#wrap .continent_suggest .suggest_contents .right_list {}
+#wrap .continent_suggest .suggest_contents .right_list a {}
+#wrap .continent_suggest .suggest_contents .right_list a h2 {}
+#wrap .continent_suggest .suggest_contents .right_list a p {}
+/* -----------------------------------------------------------------------타임특가 */
+#wrap #time_deal {}
+#wrap #time_deal .time_contents {}
+/* -------------------타임특가 스와이퍼 공통선택자 */
+#wrap #time_deal .time_contents {}
+#wrap #time_deal .time_contents .swiper {}
+#wrap #time_deal .time_contents .swiper .swiper-wrapper {}
+#wrap #time_deal .time_contents .swiper .swiper-wrapper .swiper-slide {}
+/* ------------------타임특가 개별선택자 */
+#wrap #time_deal .time_contents .left_img {}
+#wrap #time_deal .time_contents .left_img .swiper-wrapper {}
+#wrap #time_deal .time_contents .left_img .swiper-wrapper .slide1 {}
+#wrap #time_deal .time_contents .left_img .swiper-wrapper .slide2 {}
+#wrap #time_deal .time_contents .left_img .swiper-wrapper .slide3 {}
+#wrap #time_deal .time_contents .time_info {}
+#wrap #time_deal .time_contents .time_info .badge {}
+#wrap #time_deal .time_contents .time_info span {}
+#wrap #time_deal .time_contents .time_info .package {}
+#wrap #time_deal .time_contents .time_info .package h2 {}
+#wrap #time_deal .time_contents .time_info .package p {}
+#wrap #time_deal .time_contents .time_info .price_info {}
+#wrap #time_deal .time_contents .time_info .price_info p {}
+#wrap #time_deal .time_contents .time_info .price_info p del {}
+#wrap #time_deal .time_contents .time_info .reservation_btn {}
+/* ----------------------------------------------------------------------테일즈BEST */
+#wrap .best_wrap {}
+#wrap .best_wrap h1 {}
+#wrap .best_wrap .best_list {}
+#wrap .best_wrap .best_list li {}
+#wrap .best_wrap .best_list li img {}
+#wrap .best_wrap .best_list li .best_item_info {}
+#wrap .best_wrap .best_list li .best_item_info h2 {}
+#wrap .best_wrap .best_list li .best_item_info p {}
+#wrap .best_wrap > p {}
+/* --------------------------------------------------------------이벤트 */
+#wrap .event_swiper {}
+#wrap .event_swiper .swiper-wrapper {}
+#wrap .event_swiper .swiper-wrapper .swiper-slide {}
+#wrap .event_swiper .swiper-wrapper .slide1 {}
+#wrap .event_swiper .swiper-wrapper .slide2 {}
+#wrap .event_swiper .swiper-wrapper .slide3 {}
+/* --------------------------------------------------------숏츠로 보는 여행정보 */
+#wrap .shorts {}
+#wrap .shorts h1 {}
+#wrap .shorts .shorts_list {}
+#wrap .shorts .shorts_list li {}
+#wrap .shorts .shorts_list li section {}
+#wrap .shorts .shorts_list li section video {}
+#wrap .shorts .shorts_list li .shorts_txt {}
+#wrap .shorts .shorts_list li .shorts_txt h2 {}
+#wrap .shorts .shorts_list li .shorts_txt p {}
+/* -------------------------------------------------------메인 끝 */
+/* -------------------------------------------------------푸터 시작 */
+#wrap footer {}
+#wrap footer .logo {}
+#wrap footer .logo a {}
+#wrap footer .logo a img {}
+#wrap footer .foot_info {}
+#wrap footer .foot_info li {}
+#wrap footer .foot_info li a {}
+#wrap footer address {}
+#wrap footer p {}
