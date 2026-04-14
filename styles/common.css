@@ -1,1 +1,2 @@
-#wrap .contents {width: 1440px; margin:0 auto;}
+#wrap .contents {width: 1440px; margin:0 auto 160px;}
+#wrap .contents h1 {font-size: 2.13rem; font-weight: 600;}
