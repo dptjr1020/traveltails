@@ -167,7 +167,8 @@
 #wrap .spring2026 .pick .swiper-wrapper .swiper-slide .spring_txt h2 {font-size: 1.18rem; font-weight: 600;}
 #wrap .spring2026 .pick .swiper-wrapper .swiper-slide .spring_txt p {font-weight: 300;}
 /* --------------------------------------------------------대륙별 여행지 추천 */
-#wrap .continent_suggest {width: 100%;}
+#wrap .suggest_time {width:100%;}
+#wrap .continent_suggest {}
 #wrap .continent_suggest h1 {text-align: center; margin-bottom: 30px;}
 #wrap .continent_suggest .continent_list {
     display: flex; justify-content: center;
@@ -234,7 +235,7 @@
 }
 #wrap .continent_suggest .suggest_contents_bg .suggest_contents .right_list .right_card img {border-radius: 30px;}
 #wrap .continent_suggest .suggest_contents_bg .suggest_contents .right_list .right_card .card_txt {
-    display: flex; flex-flow: column; justify-content: space-between;
+    display: flex; flex-flow: column; justify-content: space-between; width: 100%;
 }
 #wrap .continent_suggest .suggest_contents_bg .suggest_contents .right_list .right_card .card_txt .card_txt_top {}
 #wrap .continent_suggest .suggest_contents_bg .suggest_contents .right_list .right_card .card_txt .card_txt_top h2 {
@@ -247,7 +248,7 @@
     font-size: 0.75rem; padding: 2px 8px; border: 1px solid #446CFF; border-radius: 10px; color: #446CFF;
     
 }
-#wrap .continent_suggest .suggest_contents_bg .suggest_contents .right_list .right_card .card_txt .price_arrow {}
+#wrap .continent_suggest .suggest_contents_bg .suggest_contents .right_list .right_card .card_txt .price_arrow {}}
 #wrap .continent_suggest .suggest_contents_bg .suggest_contents .right_list .right_card .card_txt .price_arrow .price {font-size: 1.25rem;}
 #wrap .continent_suggest .suggest_contents_bg .suggest_contents .right_list .right_card .card_txt .price_arrow .arrow {
     float: right;
@@ -257,11 +258,11 @@
 #wrap #time_deal {background-color: #E6F1FB;}
 #wrap #time_deal .time_contents {
     width: 1440px; margin: 0 auto;
-    display: flex;
+    display: flex; align-items: center;
 }
 /* -------------------타임특가 스와이퍼 공통선택자 */
 #wrap #time_deal .time_contents {}
-#wrap #time_deal .time_contents .swiper {width: 810px; height: 570px;}
+#wrap #time_deal .time_contents .swiper {width:810px; height: 570px; margin: 105px 0; border-radius: 30px;}
 #wrap #time_deal .time_contents .swiper .swiper-wrapper {}
 #wrap #time_deal .time_contents .swiper .swiper-wrapper .swiper-slide {}
 #wrap #time_deal .time_contents .swiper .swiper-wrapper .swiper-slide .time_bg_img {
@@ -275,12 +276,24 @@
 #wrap #time_deal .time_contents .left_img .swiper-wrapper .slide1 {}
 #wrap #time_deal .time_contents .left_img .swiper-wrapper .slide2 {}
 #wrap #time_deal .time_contents .left_img .swiper-wrapper .slide3 {}
-#wrap #time_deal .time_contents .time_info {}
-#wrap #time_deal .time_contents .time_info .badge {}
-#wrap #time_deal .time_contents .time_info span {}
+#wrap #time_deal .time_contents .time_info {height: 570px;}
+#wrap #time_deal .time_contents .time_info .badge {
+    font-size: 0.75rem; color: #FF9F00; display: block; width: max-content;
+    padding: 10px 15px; border:1px solid #FF9F00; border-radius: 30px; background-color: #fff;
+}
+#wrap #time_deal .time_contents .time_info span {
+    font-size: 2.88rem; font-weight: 600;
+}
 #wrap #time_deal .time_contents .time_info .package {}
-#wrap #time_deal .time_contents .time_info .package h2 {}
-#wrap #time_deal .time_contents .time_info .package p {}
+#wrap #time_deal .time_contents .time_info .package h2 {
+    font-size: 1.75rem; font-weight: 600;
+}
+#wrap #time_deal .time_contents .time_info .package .badge_group {
+    display: flex; flex-flow: row wrap; gap: 10px;
+}
+#wrap #time_deal .time_contents .time_info .package .badge_group p {
+    font-size: 0.75rem;
+}
 #wrap #time_deal .time_contents .time_info .price_info {}
 #wrap #time_deal .time_contents .time_info .price_info p {}
 #wrap #time_deal .time_contents .time_info .price_info p del {}
