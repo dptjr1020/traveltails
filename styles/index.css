@@ -318,7 +318,7 @@
 #wrap .best_wrap {width: 100%;margin: 0 auto;}
 #wrap .best_wrap h1 {text-align: center; margin-bottom: 50px;}
 #wrap .best_wrap .best_list {
-    display: flex; padding: 0 230px; gap: 20px; width: 100%;
+    display: flex; width: 1440px; margin: 0 auto; gap: 20px;
 }
 #wrap .best_wrap .best_list li {width:100%; border-radius: 30px; overflow: hidden;}
 #wrap .best_wrap .best_list li:nth-child(1) .best_card {
@@ -347,7 +347,9 @@
     display: flex; flex-flow: column; gap: 11px;
     width: 100%;
 }
-#wrap .best_wrap .best_list li .best_card .best_txt .badge_group {}
+#wrap .best_wrap .best_list li .best_card .best_txt .badge_group {
+    display: flex; flex-flow: row wrap; gap: 5px;
+}
 #wrap .best_wrap .best_list li .best_card .best_txt .badge_group .day {color: #FF9F00;}
 #wrap .best_wrap .best_list li .best_card .best_txt .badge_group span {
     font-size: 0.75rem; color: #446CFF; background-color: #fff; padding: 5px 10px;
@@ -357,7 +359,9 @@
     font-size: 1.63rem; color: #fff; line-height: 1.5;
     font-weight: 600;
 }
-#wrap .best_wrap .best_list li .best_card .best_txt .tag {display: flex; gap:8px;}
+#wrap .best_wrap .best_list li .best_card .best_txt .tag {
+    display: flex; gap:8px; flex-flow: row wrap;
+}
 #wrap .best_wrap .best_list li .best_card .best_txt .tag p {
     font-size: 0.81rem; color: #fff; line-height: 1.5;
 }
@@ -399,11 +403,19 @@
 #wrap .shorts .shorts_list li:hover .short_video {opacity: 1;}
 #wrap .shorts .shorts_list li:hover .thumb {opacity: 0;}
 #wrap .shorts .shorts_list li .shorts_txt {}
-#wrap .shorts .shorts_list li .shorts_txt .view_count {}
-#wrap .shorts .shorts_list li .shorts_txt img {
+#wrap .shorts .shorts_list li .shorts_txt .view_count {
+    position: absolute; background-color: rgba(0,0,0,0.3);
+    padding: 8px 15px; border-radius: 15px; display: flex; align-items: center;
+    gap: 2px;
+}
+#wrap .shorts .shorts_list li .shorts_txt .view_count img {width: 16px;}
+#wrap .shorts .shorts_list li .shorts_txt .view_count span {
+    color: #fff; font-weight: 3 00;
+}
+#wrap .shorts .shorts_list li .shorts_txt > img {
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
 }
-#wrap .shorts .shorts_list li:hover .shorts_txt img {opacity: 0;}
+#wrap .shorts .shorts_list li:hover .shorts_txt > img {opacity: 0;}
 #wrap .shorts .shorts_list li .shorts_txt p {
     z-index: 100; position: absolute; bottom: 20px; color: #fff;
     font-weight: 500;
@@ -419,15 +431,40 @@
 #wrap footer {
     width: 100%; padding: 50px 240px; background-color: #000;
 }
-#wrap footer .logo {}
+#wrap footer .logo {margin-bottom: 20px;}
 #wrap footer .logo a {}
-#wrap footer .logo a img {;}
-#wrap footer .foot_info {}
-#wrap footer .foot_info li {}
-#wrap footer .foot_info li a {color: #fff;}
-#wrap footer .foot_sns {display: flex; align-items: center;}
-#wrap footer .foot_sns li {}
-#wrap footer .foot_sns li a {}
-#wrap footer .foot_sns li a img {}
-#wrap footer address {color: #fff;}
-#wrap footer p {color: #fff;}
+#wrap footer .logo a img {}
+#wrap footer .foot_top {
+    display: flex; justify-content: space-between;
+    margin-bottom: 8px;
+}
+#wrap footer .foot_top .foot_info {
+    display: flex;  gap: 12px;
+}
+#wrap footer .foot_top .foot_info li:nth-child(2):after,
+#wrap footer .foot_top .foot_info li:nth-child(3):after {
+    content: '';
+    display: block;
+    height: 11px; width: 1px;
+    background-color: #fff;
+    position: absolute;
+    left: -6px; top: 3px;
+}
+#wrap footer .foot_top .foot_info li {position: relative;}
+#wrap footer .foot_top .foot_info li a {color: #fff;}
+#wrap footer .foot_top .foot_sns {
+    display: flex; align-items: center;
+    gap: 12px;
+}
+#wrap footer .foot_top .foot_sns li {}
+#wrap footer .foot_top .foot_sns li:nth-child(3) {margin-right: 10px;}
+#wrap footer .foot_top .foot_sns li a {}
+#wrap footer .foot_top .foot_sns li a img {}
+#wrap footer p {
+    color: #fff; font-size: 0.75rem; line-height: 1.5;
+    
+}
+#wrap footer address {margin-bottom: 20px;}
+#wrap footer address p {}
+#wrap footer address p:nth-child(1) {margin-bottom: 4px;}
+#wrap footer > p {}}
