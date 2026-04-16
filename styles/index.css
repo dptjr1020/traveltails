@@ -258,7 +258,7 @@
 #wrap #time_deal {background-color: #E6F1FB;}
 #wrap #time_deal .time_contents {
     width: 1440px; margin: 0 auto;
-    display: flex; align-items: center;
+    display: flex; align-items: center; gap: 50px;
 }
 /* -------------------타임특가 스와이퍼 공통선택자 */
 #wrap #time_deal .time_contents {}
@@ -276,63 +276,158 @@
 #wrap #time_deal .time_contents .left_img .swiper-wrapper .slide1 {}
 #wrap #time_deal .time_contents .left_img .swiper-wrapper .slide2 {}
 #wrap #time_deal .time_contents .left_img .swiper-wrapper .slide3 {}
-#wrap #time_deal .time_contents .time_info {height: 570px;}
+#wrap #time_deal .time_contents .time_info {
+    height: 570px;display: flex; flex-flow: column; justify-content: space-between;
+    width: 400px;
+}
 #wrap #time_deal .time_contents .time_info .badge {
     font-size: 0.75rem; color: #FF9F00; display: block; width: max-content;
     padding: 10px 15px; border:1px solid #FF9F00; border-radius: 30px; background-color: #fff;
 }
 #wrap #time_deal .time_contents .time_info span {
-    font-size: 2.88rem; font-weight: 600;
+    font-size: 2.88rem; font-weight: 600; line-height: 1.4;
 }
 #wrap #time_deal .time_contents .time_info .package {}
 #wrap #time_deal .time_contents .time_info .package h2 {
-    font-size: 1.75rem; font-weight: 600;
+    font-size: 1.75rem; font-weight: 600; margin-bottom: 15px;
 }
 #wrap #time_deal .time_contents .time_info .package .badge_group {
-    display: flex; flex-flow: row wrap; gap: 10px;
+    display: flex; flex-flow: row wrap; gap: 8px;
 }
 #wrap #time_deal .time_contents .time_info .package .badge_group p {
     font-size: 0.75rem;
 }
 #wrap #time_deal .time_contents .time_info .price_info {}
-#wrap #time_deal .time_contents .time_info .price_info p {}
-#wrap #time_deal .time_contents .time_info .price_info p del {}
-#wrap #time_deal .time_contents .time_info .reservation_btn {}
+#wrap #time_deal .time_contents .time_info .price_info .dc_info {
+    font-size: 0.88rem; width: 180px; display: inline-block;
+    color: #446CFF;height: 48px;text-align: center; line-height: 38px;
+    background-image: url(../images/main/txtbox.png);
+    background-size: cover;
+}
+#wrap #time_deal .time_contents .time_info .price_info .price_detail {
+    display: flex; flex-flow: row nowrap; align-items: end ; gap: 4px;
+}
+#wrap #time_deal .time_contents .time_info .price_info .price_detail .prev_price {height: max-content;}
+#wrap #time_deal .time_contents .time_info .price_info .price_detail .prev_price del {color: #777;}
+#wrap #time_deal .time_contents .time_info .price_info .price_detail .price {font-size: 2.13rem; font-weight: 500;}
+#wrap #time_deal .time_contents .time_info .reservation_btn {
+    font-size: 1.25rem; font-weight: 500; color:#fff; border-radius: 50px;
+    width: 280px; height: 50px; background-color: #446CFF;
+}
 /* ----------------------------------------------------------------------테일즈BEST */
-#wrap .best_wrap {}
-#wrap .best_wrap h1 {}
-#wrap .best_wrap .best_list {}
-#wrap .best_wrap .best_list li {}
-#wrap .best_wrap .best_list li img {}
-#wrap .best_wrap .best_list li .best_item_info {}
-#wrap .best_wrap .best_list li .best_item_info h2 {}
-#wrap .best_wrap .best_list li .best_item_info p {}
-#wrap .best_wrap > p {}
+#wrap .best_wrap {width: 100%;margin: 0 auto;}
+#wrap .best_wrap h1 {text-align: center; margin-bottom: 50px;}
+#wrap .best_wrap .best_list {
+    display: flex; padding: 0 230px; gap: 20px; width: 100%;
+}
+#wrap .best_wrap .best_list li {width:100%; border-radius: 30px; overflow: hidden;}
+#wrap .best_wrap .best_list li:nth-child(1) .best_card {
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) 100%), url(../images/main/best1.jpg);
+}
+#wrap .best_wrap .best_list li:nth-child(2) .best_card {
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) 100%), url(../images/main/best2.jpg)
+}
+#wrap .best_wrap .best_list li:nth-child(3) .best_card {
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) 100%), url(../images/main/best3.jpg)
+}
+#wrap .best_wrap .best_list li:nth-child(4) .best_card {
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) 100%), url(../images/main/best4.jpg)
+}
+#wrap .best_wrap .best_list li:nth-child(1) .best_card,
+#wrap .best_wrap .best_list li:nth-child(2) .best_card,
+#wrap .best_wrap .best_list li:nth-child(3) .best_card,
+#wrap .best_wrap .best_list li:nth-child(4) .best_card {
+    background-size: cover; background-position: center;
+    height: 500px; width: 100%;
+}
+#wrap .best_wrap .best_list li .best_card { 
+    padding: 30px; display: flex; align-items: end;
+}
+#wrap .best_wrap .best_list li .best_card .best_txt {
+    display: flex; flex-flow: column; gap: 11px;
+    width: 100%;
+}
+#wrap .best_wrap .best_list li .best_card .best_txt .badge_group {}
+#wrap .best_wrap .best_list li .best_card .best_txt .badge_group .day {color: #FF9F00;}
+#wrap .best_wrap .best_list li .best_card .best_txt .badge_group span {
+    font-size: 0.75rem; color: #446CFF; background-color: #fff; padding: 5px 10px;
+    border-radius: 50px; font-weight: 500;
+}
+#wrap .best_wrap .best_list li .best_card .best_txt h2 {
+    font-size: 1.63rem; color: #fff; line-height: 1.5;
+    font-weight: 600;
+}
+#wrap .best_wrap .best_list li .best_card .best_txt .tag {display: flex; gap:8px;}
+#wrap .best_wrap .best_list li .best_card .best_txt .tag p {
+    font-size: 0.81rem; color: #fff; line-height: 1.5;
+}
+#wrap .best_wrap .best_list li .best_card .best_txt .price {
+    font-size: 1.88rem; font-weight: 600; color: #fff;
+    line-height: 1.5;
+}
+#wrap .best_wrap .best_list li .best_card .best_txt .best_reserve_btn {
+    font-size: 1.13rem; font-weight: 600; color: #fff; display: block;
+    width: 100%; background-color: #446CFF; padding: 15px 0; border-radius: 50px;
+}
+#wrap .best_wrap > p {text-align: center; margin-top: 25px; color: #444;}
+
 /* --------------------------------------------------------------이벤트 */
-#wrap .event_swiper {}
-#wrap .event_swiper .swiper-wrapper {}
-#wrap .event_swiper .swiper-wrapper .swiper-slide {}
-#wrap .event_swiper .swiper-wrapper .slide1 {}
-#wrap .event_swiper .swiper-wrapper .slide2 {}
-#wrap .event_swiper .swiper-wrapper .slide3 {}
+#wrap .event_bnr {width:1440px;margin: 100px auto 160px;}
+#wrap .event_bnr .event_swiper {}
+#wrap .event_bnr .event_swiper .swiper-wrapper {align-items: end;}
+#wrap .event_bnr .event_swiper .swiper-wrapper .swiper-slide {display: flex; align-items: end;}
+#wrap .event_bnr .event_swiper .swiper-wrapper .swiper-slide img {width: 100%; border-radius: 20px;}
+#wrap .event_bnr .event_swiper .swiper-wrapper .slide1 {}
+#wrap .event_bnr .event_swiper .swiper-wrapper .slide2 {}
+#wrap .event_bnr .event_swiper .swiper-wrapper .slide3 {}
 /* --------------------------------------------------------숏츠로 보는 여행정보 */
 #wrap .shorts {}
-#wrap .shorts h1 {}
-#wrap .shorts .shorts_list {}
-#wrap .shorts .shorts_list li {}
-#wrap .shorts .shorts_list li section {}
-#wrap .shorts .shorts_list li section video {}
+#wrap .shorts h1 {text-align: center; margin-bottom: 50px;}
+#wrap .shorts .shorts_list {
+    display: flex; gap: 20px;
+}
+#wrap .shorts .shorts_list li {
+    width: 100%; height: 570px; position: relative;
+    padding: 20px;
+}
+#wrap .shorts .shorts_list li .thumb,
+#wrap .shorts .shorts_list li .short_video {
+    width: 100%; height: 100%; position: absolute; top: 0; left: 0;
+    object-fit: cover; border-radius: 20px;
+}
+#wrap .shorts .shorts_list li .short_video {opacity: 0;}
+#wrap .shorts .shorts_list li:hover .short_video {opacity: 1;}
+#wrap .shorts .shorts_list li:hover .thumb {opacity: 0;}
 #wrap .shorts .shorts_list li .shorts_txt {}
-#wrap .shorts .shorts_list li .shorts_txt h2 {}
-#wrap .shorts .shorts_list li .shorts_txt p {}
+#wrap .shorts .shorts_list li .shorts_txt .view_count {}
+#wrap .shorts .shorts_list li .shorts_txt img {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+}
+#wrap .shorts .shorts_list li:hover .shorts_txt img {opacity: 0;}
+#wrap .shorts .shorts_list li .shorts_txt p {
+    z-index: 100; position: absolute; bottom: 20px; color: #fff;
+    font-weight: 500;
+}
+#wrap .shorts .shorts_list li .view_detail {
+    position: absolute; bottom:-45px; z-index: 200; left: 0px;
+    font-size: 1.25rem; font-weight: 500; color: #446CFF;
+    border: 1px solid #446CFF; width: 100%; padding: 8px 0;
+    border-radius: 12px;
+}
 /* -------------------------------------------------------메인 끝 */
 /* -------------------------------------------------------푸터 시작 */
-#wrap footer {}
+#wrap footer {
+    width: 100%; padding: 50px 240px; background-color: #000;
+}
 #wrap footer .logo {}
 #wrap footer .logo a {}
-#wrap footer .logo a img {}
+#wrap footer .logo a img {;}
 #wrap footer .foot_info {}
 #wrap footer .foot_info li {}
-#wrap footer .foot_info li a {}
-#wrap footer address {}
-#wrap footer p {}
+#wrap footer .foot_info li a {color: #fff;}
+#wrap footer .foot_sns {display: flex; align-items: center;}
+#wrap footer .foot_sns li {}
+#wrap footer .foot_sns li a {}
+#wrap footer .foot_sns li a img {}
+#wrap footer address {color: #fff;}
+#wrap footer p {color: #fff;}

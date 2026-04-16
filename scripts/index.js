@@ -4,7 +4,8 @@ const hero_video = document.querySelectorAll('#hero_wrap .hero_video');
 const continent_tab = document.querySelectorAll('.continent_list li a');
 const continent_video = document.querySelectorAll('.suggest_contents_bg .suggest_contents')
 const time = document.querySelector('.time_contents .left_img')
-console.log(pick, hero_tab, hero_video, continent_tab, continent_video, time);
+const eventbnr = document.querySelector('.event_bnr .event_swiper')
+console.log(pick, hero_tab, hero_video, continent_tab, continent_video, time, eventbnr);
 
 const pickSwiper = new Swiper(pick,{
     slidesPerView:5,
@@ -45,4 +46,17 @@ for (let i=0; i<continent_tab.length; i++){
 const timeSwiper = new Swiper(time,{
     slidesPerView:1,
     loop:true,
+    pagination: {
+        el:'.swiper-pagination'
+    }
+})
+// ------------------------------------------------------이벤트배너
+const eventSwiper = new Swiper(eventbnr,{
+    slidesPerView:1,
+    loop:true,
+    autoplay:{
+        delay:5000,
+
+    }
+
 })
