@@ -36,8 +36,8 @@
 #wrap header #head_contents .head_right .schedule img {scale: 1.1;}
 /* -------------------------------------------------------헤더 끝 */
 /* --------------------------------------------------------메인 시작 */
-#wrap #hero_wrap {
-    position: relative; height: 100vh;
+#wrap .hero_wrap {
+    position: relative; height: 100%;
     width: 100%;
     margin-bottom: 160px;
 }
@@ -59,10 +59,10 @@
     color: #fff; line-height: 55px; background-color: #000;opacity: 0.6
 }
 #wrap #hero_wrap .hero_video {
-    display: block; width: 100%; overflow:hidden;height: 100vh;
-    position: absolute; top: 0; right: 0; display: none;
+    display: block; width: 100%; overflow:hidden; height: 100vh;
+    top: 0; right: 0; display: none;
 }
-#wrap #hero_wrap .hero_video video {width:100%;}
+#wrap #hero_wrap .hero_video video {width:100%; height: 100vh; object-fit: cover;}
 #wrap #hero_wrap .hero_video img {width: 100%;}
 #wrap #hero_wrap .hero_video .hero_txt {
     position: absolute; top: 65%; left: 240px;
@@ -354,7 +354,7 @@
     border-radius: 50px; font-weight: 500;
 }
 #wrap .best_wrap .best_list li .best_card .best_txt h2 {
-    font-size: 1.63rem; color: #fff; line-height: 1.5;
+    font-size: 1.53rem; color: #fff; line-height: 1.5;
     font-weight: 600;
 }
 #wrap .best_wrap .best_list li .best_card .best_txt .tag {display: flex; gap:8px;}
