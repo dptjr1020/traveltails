@@ -1,0 +1,68 @@
+#wrap header {position: absolute; width: 100%; z-index: 100;}
+#wrap header #head_contents {background-color: rgba(206, 206, 206, 0.8);}
+/* -----------------------------------------------------------------------히어로배너 */
+#wrap main .hero_wrap {
+    height:480px; width: 100%;
+    background-image: url(../images/list_pg/list_page_top.png);
+    padding:190px 0 0 240px; margin-bottom: 120px;
+}
+#wrap main .hero_wrap .hero_txt {}
+#wrap main .hero_wrap .hero_txt p,
+#wrap main .hero_wrap h1 {font-weight: 600; color: #fff; line-height: 1.5;}
+#wrap main .hero_wrap .hero_txt p {font-size: 1.25rem;}
+#wrap main .hero_wrap h1 {font-size: 2.63rem;}
+/* --------------------------------------------------------------------일본 인기도시 */
+#wrap main .jp_hot {}
+#wrap main .jp_hot .city_wrap {
+    display:flex; justify-content: space-between;
+}
+#wrap main .jp_hot .city_wrap li a img {transition: 0.3s;}
+#wrap main .jp_hot .city_wrap li a:hover img {filter: brightness(0.8);}
+#wrap main .jp_hot .city_wrap li a {text-align: center;}
+#wrap main .jp_hot .city_wrap li a h2 {font-size: 1.13rem; font-weight: 500; margin-top: 8px;}
+/* -----------------------------------------------------------------상단 카드 스와이프배너 */
+#wrap main .card_bnr {}
+#wrap main .card_bnr .swiper-wrapper {}
+#wrap main .card_bnr .swiper-wrapper .swiper-slide {}
+#wrap main .card_bnr .swiper-wrapper .swiper-slide a {
+    height: 505px; display: block; width:100%;
+    padding: 80px 0 0 30px; position: relative; border-radius: 30px; overflow: hidden;
+}
+#wrap main .card_bnr .swiper-wrapper .swiper-slide a::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.1);
+    z-index: 1;
+}
+#wrap main .card_bnr .swiper-wrapper .swiper-slide:nth-child(1) a {background-image: url(../images/list_pg/card1.png);}
+#wrap main .card_bnr .swiper-wrapper .swiper-slide:nth-child(2) a {background-image: url(../images/list_pg/card2.png);}
+#wrap main .card_bnr .swiper-wrapper .swiper-slide:nth-child(3) a {background-image: url(../images/list_pg/card3.png);}
+#wrap main .card_bnr .swiper-wrapper .swiper-slide:nth-child(4) a {background-image: url(../images/list_pg/card4.png);}
+#wrap main .card_bnr .swiper-wrapper .swiper-slide:nth-child(5) a {background-image: url(../images/list_pg/card5.png);}
+#wrap main .card_bnr .swiper-wrapper .swiper-slide:nth-child(6) a {background-image: url(../images/list_pg/card6.png);}
+#wrap main .card_bnr .swiper-wrapper .swiper-slide:nth-child(7) a {background-image: url(../images/list_pg/card7.png);}
+#wrap main .card_bnr .swiper-wrapper .swiper-slide:nth-child(8) a {background-image: url(../images/list_pg/card8.png);}
+#wrap main .card_bnr .swiper-wrapper .swiper-slide:nth-child(9) a {background-image: url(../images/list_pg/card9.png);}
+#wrap main .card_bnr .swiper-wrapper .swiper-slide:nth-child(10) a {background-image: url(../images/list_pg/card10.png);}
+#wrap main .card_bnr .swiper-wrapper .swiper-slide a span,
+#wrap main .card_bnr .swiper-wrapper .swiper-slide a p {color: #fff; line-height: 1.5; font-weight: 500; position: relative; z-index: 5;}
+#wrap main .card_bnr .swiper-wrapper .swiper-slide a span {font-size: 1.52rem; display: inline-block;}
+#wrap main .card_bnr .swiper-wrapper .swiper-slide a p {font-size: 1.21rem;}
+/* -------------------------------------------------------------------------요즘 뜨는 여행지 */
+#wrap main .recent_hotspot {width: 1440px;}
+#wrap main .recent_hotspot .hotspot_list {display: flex; gap: 20px;}
+#wrap main .recent_hotspot .hotspot_list li {}
+#wrap main .recent_hotspot .hotspot_list li a {height: 100%; display: inline-block;}
+#wrap main .recent_hotspot .hotspot_list li a .item_img {border-radius: 30px; margin-bottom: 15px;}
+#wrap main .recent_hotspot .hotspot_list li a .txt_box {}
+#wrap main .recent_hotspot .hotspot_list li a .txt_box .txt_top {margin-bottom: 30px;}
+#wrap main .recent_hotspot .hotspot_list li a .txt_box .txt_top h2 {font-size: 1.13rem; font-weight: 500;margin-bottom: 12px;}
+#wrap main .recent_hotspot .hotspot_list li a .txt_box .txt_top .tags {display:flex; flex-flow: row wrap;}
+#wrap main .recent_hotspot .hotspot_list li a .txt_box .txt_top .tags p {font-size: 0.81rem; color: #777;}
+#wrap main .recent_hotspot .hotspot_list li a .txt_box .txt_bottom {}
+#wrap main .recent_hotspot .hotspot_list li a .txt_box .txt_bottom .price {font-size: 1.25rem; font-weight: 500;}
+#wrap main .recent_hotspot .hotspot_list li a .txt_box .txt_bottom .review {display:flex; gap: 4px;align-items: center; margin-top: 8px;}
+#wrap main .recent_hotspot .hotspot_list li a .txt_box .txt_bottom .review .review_star {}
+#wrap main .recent_hotspot .hotspot_list li a .txt_box .txt_bottom .review p {font-size: 0.88rem;}
+#wrap main .recent_hotspot .hotspot_list li a .txt_box .txt_bottom .review p span {font-weight: 500;}
