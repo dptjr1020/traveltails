@@ -1,4 +1,8 @@
 /* ------------------------------------------------------------헤더 공통(메인기준) */
+#wrap header {}
+#wrap header.scroll {
+    position: sticky; top:0; background-color: #000;
+}
 #wrap header #head_contents {
     display:flex; flex-flow:row nowrap; justify-content: space-between; align-items: center;
     padding: 0 240px; height: 70px; position: relative;

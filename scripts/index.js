@@ -5,7 +5,21 @@ const continent_tab = document.querySelectorAll('.continent_list li a');
 const continent_video = document.querySelectorAll('.suggest_contents_bg .suggest_contents')
 const time = document.querySelector('.time_contents .left_img')
 const eventbnr = document.querySelector('.event_bnr .event_swiper')
+const header = document.querySelector('header')
 console.log(pick, hero_tab, hero_video, continent_tab, continent_video, time, eventbnr);
+
+// -----------------------------------------header
+window.addEventListener('scroll',function(){
+    const vh = this.window.innerHeight;
+    if(this.window.scrollY >= vh){
+        header.classList.add('scroll')
+    }
+    else header.classList.remove('scroll')
+})
+
+
+
+
 
 const pickSwiper = new Swiper(pick,{
     slidesPerView:5,

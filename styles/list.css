@@ -110,11 +110,90 @@
 #wrap main .steady_seller .steadysel_list li a .right_txt .txt_bottom .review p {}
 #wrap main .steady_seller .steadysel_list li a .right_txt .txt_bottom .review p span {font-weight: 500;}
 /* ------------------------------------------------------------------------키워드 테마 */
-#wrap main .keyword_wrap .theme {display: flex; gap: 10px; justify-content: center;}
+#wrap main .keyword_wrap {position: relative;}
+#wrap main .keyword_wrap .more {position: absolute; right: 0; top: 100px;}
+#wrap main .keyword_wrap .theme {display: flex; gap: 10px; justify-content: center; margin-bottom: 30px;}
 #wrap main .keyword_wrap .theme li {height: 100%;}
 #wrap main .keyword_wrap .theme li a {
     font-weight: 600; padding: 8px 18px; border: 1px solid #aaa;
     border-radius: 30px; color: #aaa; height: 100%; display: block;
 }
 #wrap main .keyword_wrap .theme li a.active {color: #fff; border: 1px solid #446CFF; background-color: #446CFF;}
-#wrap main .keyword_wrap .theme_item {display: flex; gap: 20px;}
+#wrap main .keyword_wrap .theme_item {
+    display: flex; gap: 20px; display: none;
+}
+#wrap main .keyword_wrap .theme_item li a > img {
+    width: 100%; aspect-ratio: 4 / 2.8; border-radius: 30px;
+}
+#wrap main .keyword_wrap .theme_item li {
+    width: calc(25% - 10px);
+}
+#wrap main .keyword_wrap .theme_item li a {}
+#wrap main .keyword_wrap .theme_item li a .item_txt {}
+#wrap main .keyword_wrap .theme_item li a .item_txt .txt_top {margin-top: 12px;}
+#wrap main .keyword_wrap .theme_item li a .item_txt .txt_top h2 {
+    font-size: 1.13rem; font-weight: 500; margin-bottom: 8px;
+}
+#wrap main .keyword_wrap .theme_item li a .item_txt .txt_top .tags {
+    display: flex; flex-flow: row wrap; gap: 4px; margin-bottom: 20px;
+}
+#wrap main .keyword_wrap .theme_item li a .item_txt .txt_top .tags p {
+    font-size: 0.81rem; color: #777;
+}
+#wrap main .keyword_wrap .theme_item li a .item_txt .txt_bottom {}
+#wrap main .keyword_wrap .theme_item li a .item_txt .txt_bottom .price {
+    font-size: 1.25rem ;font-weight: 500; line-height: 1.5;
+}
+#wrap main .keyword_wrap .theme_item li a .item_txt .txt_bottom .review {
+    display: flex; gap: 4px;
+}
+#wrap main .keyword_wrap .theme_item li a .item_txt .txt_bottom .review img {}
+#wrap main .keyword_wrap .theme_item li a .item_txt .txt_bottom .review p {font-size: 0.88rem;}
+#wrap main .keyword_wrap .theme_item li a .item_txt .txt_bottom .review p span {font-weight: 500;}
+/* --------------------------------------------------------숙소 */
+#wrap main .hotel_wrap {position: relative;}
+#wrap main .hotel_wrap .hotel_title {}
+#wrap main .hotel_wrap .hotel_title h1 {margin-bottom: 22px;}
+#wrap main .hotel_wrap .hotel_title p {text-align: center; margin-bottom: 30px;}
+#wrap main .hotel_wrap .more {position: absolute; right: 0; top: 120px;}
+#wrap main .hotel_wrap .hotel_loc_list {display: flex; gap: 10px; justify-content: center; margin-bottom: 30px;}
+#wrap main .hotel_wrap .hotel_loc_list li {}
+#wrap main .hotel_wrap .hotel_loc_list li a {
+    font-weight: 600; padding: 8px 18px; border: 1px solid #aaa;
+    border-radius: 30px; color: #aaa; height: 100%; display: block;
+}
+#wrap main .hotel_wrap .hotel_loc_list li a.active {color: #fff; border: 1px solid #446CFF; background-color: #446CFF;}
+#wrap main .hotel_wrap .hotel_list {display: none; gap: 20px;}
+#wrap main .hotel_wrap .hotel_list li {
+    width: calc(100% / 6); 
+}
+#wrap main .hotel_wrap .hotel_list li a {}
+#wrap main .hotel_wrap .hotel_list li a .img_wrap {}
+#wrap main .hotel_wrap .hotel_list li a .img_wrap img {
+    width: 100%; aspect-ratio: 3 / 3.5; object-fit: cover; border-radius: 30px;
+    margin-bottom: 12px;
+}
+#wrap main .hotel_wrap .hotel_list li a .txt_box {}
+#wrap main .hotel_wrap .hotel_list li a .txt_box .txt_top {margin-bottom: 20px;}
+#wrap main .hotel_wrap .hotel_list li a .txt_box .txt_top h2 {
+    font-size: 1.13rem; font-weight: 500; margin-bottom: 8px;
+}
+#wrap main .hotel_wrap .hotel_list li a .txt_box .txt_top p {
+    font-size: 0.81rem; color: #777;
+}
+#wrap main .hotel_wrap .hotel_list li a .txt_box .txt_bottom {}
+#wrap main .hotel_wrap .hotel_list li a .txt_box .txt_bottom .price {
+    font-size: 1.25rem ;font-weight: 500; line-height: 1.5;
+}
+#wrap main .hotel_wrap .hotel_list li a .txt_box .txt_bottom .review {
+    display: flex; gap: 4px;
+}
+#wrap main .hotel_wrap .hotel_list li a .txt_box .txt_bottom .review img {}
+#wrap main .hotel_wrap .hotel_list li a .txt_box .txt_bottom .review p {font-size: 0.88rem;}
+#wrap main .hotel_wrap .hotel_list li a .txt_box .txt_bottom .review p span {font-weight: 500;}
+/* -------------------------------------------------------이벤트 배너 */
+#wrap main .event_bnr { width:1440px; margin: 0 auto 50px; border-radius: 30px; height: 200px;}
+#wrap main .event_bnr .swiper-wrapper {align-items: end;height: 100%;}
+#wrap main .event_bnr .swiper-wrapper .swiper-slide {}
+#wrap main .event_bnr .swiper-wrapper .swiper-slide a {display: block; width: 100%; height: 100%;}
+#wrap main .event_bnr .swiper-wrapper .swiper-slide a img {width: 100%; height: 100%;}
