@@ -133,15 +133,15 @@
 #wrap .spring2026 .pick .swiper-wrapper .slide3 a {background-image: url(../images/common/spring_bangkok.png);}
 #wrap .spring2026 .pick .swiper-wrapper .slide4 a {background-image: url(../images/common/spring_flower.png);}
 #wrap .spring2026 .pick .swiper-wrapper .slide5 a {background-image: url(../images/common/spring_newyork.png);}
-#wrap .spring2026 .pick .swiper-wrapper .slide6 a {background-image: url(../images/common/spring_kyoto.jpg);}
-#wrap .spring2026 .pick .swiper-wrapper .slide7 a {background-image: url(../images/common/spring_rome.png);}
-#wrap .spring2026 .pick .swiper-wrapper .slide8 a {background-image: url(../images/common/spring_kyoto.jpg);}
-#wrap .spring2026 .pick .swiper-wrapper .slide9 a {background-image: url(../images/common/spring_rome.png);}
-#wrap .spring2026 .pick .swiper-wrapper .slide10 a {background-image: url(../images/common/spring_bangkok.png);}
-#wrap .spring2026 .pick .swiper-wrapper .slide11 a {background-image: url(../images/common/spring_flower.png);}
-#wrap .spring2026 .pick .swiper-wrapper .slide12 a {background-image: url(../images/common/spring_newyork.png);}
-#wrap .spring2026 .pick .swiper-wrapper .slide13 a {background-image: url(../images/common/spring_kyoto.jpg);}
-#wrap .spring2026 .pick .swiper-wrapper .slide14 a {background-image: url(../images/common/spring_rome.png);}
+#wrap .spring2026 .pick .swiper-wrapper .slide6 a {background-image: url(../images/common/spring_bajing.jpeg);}
+#wrap .spring2026 .pick .swiper-wrapper .slide7 a {
+    background-image: url(../images/common/spring_la.jpg);
+}
+#wrap .spring2026 .pick .swiper-wrapper .slide8 a {background-image: url(../images/common/spring_london.jpg);}
+#wrap .spring2026 .pick .swiper-wrapper .slide9 a {background-image: url(../images/common/spring_taipei.png);}
+#wrap .spring2026 .pick .swiper-wrapper .slide10 a {background-image: url(../images/common/spring_monggol.jpg);}
+#wrap .spring2026 .pick .swiper-wrapper .slide11 a {background-image: url(../images/common/spring_osaka.webp);}
+#wrap .spring2026 .pick .swiper-wrapper .slide12 a {background-image: url(../images/common/spring_fukuoka.jpg);}
 #wrap .spring2026 .pick .swiper-wrapper .swiper-slide .spring_txt {
     display: inline-block; background-position: center; background-size:cover;
     text-align: left; height: 100%; border-radius: 30px;
@@ -165,7 +165,7 @@
     line-height: 1.5;
 }
 #wrap .spring2026 .pick .swiper-wrapper .swiper-slide .spring_txt h2 {font-size: 1.18rem; font-weight: 600;}
-#wrap .spring2026 .pick .swiper-wrapper .swiper-slide .spring_txt p {font-weight: 300;}
+#wrap .spring2026 .pick .swiper-wrapper .swiper-slide .spring_txt p {font-size:0.88rem; font-weight: 300;}
 /* --------------------------------------------------------대륙별 여행지 추천 */
 #wrap .suggest_time {width:100%;}
 #wrap .continent_suggest {}
@@ -267,15 +267,14 @@
 #wrap #time_deal .time_contents .swiper .swiper-wrapper .swiper-slide {}
 #wrap #time_deal .time_contents .swiper .swiper-wrapper .swiper-slide .time_bg_img {
     width: 100%; height: 570px;
-    background-image: url(../images/main/timedeal_img.jpg);
-    background-size: cover;
+    background-size: cover; background-position: center;
 }
 /* ------------------타임특가 개별선택자 */
 #wrap #time_deal .time_contents .left_img {}
 #wrap #time_deal .time_contents .left_img .swiper-wrapper {}
-#wrap #time_deal .time_contents .left_img .swiper-wrapper .slide1 {}
-#wrap #time_deal .time_contents .left_img .swiper-wrapper .slide2 {}
-#wrap #time_deal .time_contents .left_img .swiper-wrapper .slide3 {}
+#wrap #time_deal .time_contents .left_img .swiper-wrapper .slide1 .time_bg_img {background-image: url(../images/main/timedeal_img.jpg);}
+#wrap #time_deal .time_contents .left_img .swiper-wrapper .slide2 .time_bg_img {background-image: url(../images/main/timedeal_img2.webp);}
+#wrap #time_deal .time_contents .left_img .swiper-wrapper .slide3 .time_bg_img {background-image: url(../images/main/timedeal_img3.jpg);}
 #wrap #time_deal .time_contents .time_info {
     height: 570px;display: flex; flex-flow: column; justify-content: space-between;
     width: 400px;
@@ -287,6 +286,7 @@
 #wrap #time_deal .time_contents .time_info span {
     font-size: 2.88rem; font-weight: 600; line-height: 1.4;
 }
+#wrap #time_deal .time_contents .time_info span #timer {}
 #wrap #time_deal .time_contents .time_info .package {}
 #wrap #time_deal .time_contents .time_info .package h2 {
     font-size: 1.75rem; font-weight: 600; margin-bottom: 15px;
@@ -299,7 +299,7 @@
 }
 #wrap #time_deal .time_contents .time_info .price_info {}
 #wrap #time_deal .time_contents .time_info .price_info .dc_info {
-    font-size: 0.88rem; width: 180px; display: inline-block;
+    font-size: 0.88rem; width: 190px; display: inline-block;
     color: #446CFF;height: 48px;text-align: center; line-height: 38px;
     background-image: url(../images/main/txtbox.png);
     background-size: cover;
@@ -312,7 +312,10 @@
 #wrap #time_deal .time_contents .time_info .price_info .price_detail .price {font-size: 2.13rem; font-weight: 500;}
 #wrap #time_deal .time_contents .time_info .reservation_btn {
     font-size: 1.25rem; font-weight: 500; color:#fff; border-radius: 50px;
-    width: 280px; height: 50px; background-color: #446CFF;
+    width: 280px; height: 50px; background-color: #446CFF; transition: background-color 0.3s ease;
+}
+#wrap #time_deal .time_contents .time_info .reservation_btn:hover {
+    background-color: #2251FF;
 }
 /* ----------------------------------------------------------------------테일즈BEST */
 #wrap .best_wrap {width: 100%;margin: 0 auto;}
@@ -369,7 +372,7 @@
     font-size: 1.88rem; font-weight: 600; color: #fff;
     line-height: 1.5;
 }
-#wrap .best_wrap .best_list li .best_card .best_txt .best_reserve_btn {
+#wrap .best_wrap .best_list li .best_card .best_txt .reservation_btn {
     font-size: 1.13rem; font-weight: 600; color: #fff; display: block;
     width: 100%; background-color: #446CFF; padding: 15px 0; border-radius: 50px;
 }
@@ -420,15 +423,18 @@
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
 }
 #wrap .shorts .shorts_list li:hover .shorts_txt > img {opacity: 0;}
+#wrap .shorts .shorts_list li .shorts_txt .txt_btm {
+    position: absolute; bottom: 0; z-index: 200; width: 90%;
+    margin-bottom: 20px;
+}
 #wrap .shorts .shorts_list li .shorts_txt p {
-    z-index: 100; position: absolute; bottom: 20px; color: #fff;
+    color: #fff; margin-bottom: 10px;
     font-weight: 500;
 }
-#wrap .shorts .shorts_list li .view_detail {
-    position: absolute; bottom:-45px; z-index: 200; left: 0px;
-    font-size: 1.25rem; font-weight: 500; color: #446CFF;
-    border: 1px solid #446CFF; width: 100%; padding: 8px 0;
-    border-radius: 12px;
+#wrap .shorts .shorts_list li .shorts_txt .view_detail {
+    font-size: 1.25rem; font-weight: 500; color: #fff;
+    border: 1px solid #fff; width: 100%; padding: 8px 0;
+    border-radius: 12px; background: rgba(0,0,0,0.4);
 }
 /* -------------------------------------------------------메인 끝 */
 /* -------------------------------------------------------푸터 시작 */

@@ -6,7 +6,9 @@ const continent_video = document.querySelectorAll('.suggest_contents_bg .suggest
 const time = document.querySelector('.time_contents .left_img')
 const eventbnr = document.querySelector('.event_bnr .event_swiper')
 const header = document.querySelector('header')
-console.log(pick, hero_tab, hero_video, continent_tab, continent_video, time, eventbnr);
+
+console.log(pick, hero_tab, hero_video, continent_tab, continent_video, time, eventbnr, header);
+
 
 // -----------------------------------------header
 window.addEventListener('scroll',function(){
@@ -58,12 +60,51 @@ for (let i=0; i<continent_tab.length; i++){
 }
 // -------------------------------------------------------타임딜
 const timeSwiper = new Swiper(time,{
+    autoplay:{
+        delay:4000,
+    },
     slidesPerView:1,
     loop:true,
     pagination: {
         el:'.swiper-pagination'
     }
 })
+
+
+document.addEventListener('DOMContentLoaded', () => {
+const timer = document.getElementById('timer');
+
+const DURATION = 3 * 60 * 60 * 1000;
+
+let startTime = localStorage.getItem('startTime');
+
+if (!startTime) {
+    startTime = Date.now();
+    localStorage.setItem('startTime', startTime);
+} else {
+    startTime = parseInt(startTime);
+}
+
+setInterval(() => {
+    const now = Date.now();
+    let gap = DURATION - (now - startTime);
+
+    if (gap <= 0) {
+    startTime = Date.now();
+    localStorage.setItem('startTime', startTime);
+    gap = DURATION;
+    }
+
+    const h = Math.floor(gap / 1000 / 60 / 60);
+    const m = Math.floor((gap / 1000 / 60) % 60);
+    const s = Math.floor((gap / 1000) % 60);
+
+    timer.innerText =
+    String(h).padStart(2, '0') + ':' +
+    String(m).padStart(2, '0') + ':' +
+    String(s).padStart(2, '0') + ' 남음';
+}, 1000);
+});
 // ------------------------------------------------------이벤트배너
 const eventSwiper = new Swiper(eventbnr,{
     slidesPerView:1,

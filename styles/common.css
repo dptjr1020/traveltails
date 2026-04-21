@@ -1,4 +1,7 @@
 /* ------------------------------------------------------------헤더 공통(메인기준) */
+#wrap .reservation_btn:hover {
+    background-color: #2251FF;
+}
 #wrap header {}
 #wrap header.scroll {
     position: sticky; top:0; background-color: #000;
@@ -25,7 +28,7 @@
     color: #446CFF; transition: color 0.3s ease;
 }
 #wrap header #head_contents .head_left #gnb > li:nth-child(1) .lnb {
-    display: none;width: 1920px; height:35px;position: absolute; left: 0; bottom: -35px;
+    display: flex;width: 100vw; height:35px;position: absolute; left: 0; bottom: -35px;
     gap:15px; background-color: #fff; padding-left: 360px; border-top: 1px solid #ddd;
 }
 #wrap header #head_contents .head_left #gnb > li .lnb {
