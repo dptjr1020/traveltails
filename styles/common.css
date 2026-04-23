@@ -35,7 +35,7 @@ Any resemblance to real-world commercial sites is purely for design practice.
     color: #446CFF; transition: color 0.3s ease;
 }
 #wrap header #head_contents .head_left #gnb > li:nth-child(1) .lnb {
-    display: flex;width: 100vw; height:35px;position: absolute; left: 0; bottom: -35px;
+    display: none;width: 100vw; height:35px;position: absolute; left: 0; bottom: -35px;
     gap:15px; background-color: #fff; padding-left: 360px; border-top: 1px solid #ddd;
 }
 #wrap header #head_contents .head_left #gnb > li .lnb {

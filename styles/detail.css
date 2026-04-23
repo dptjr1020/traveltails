@@ -1,0 +1,51 @@
+/* ----------------------------------------------------------------sticky sidebar 시작 */
+#wrap main #main_wrap {max-width: 1440px; margin: 0 auto;}
+#wrap main #main_wrap #sticky_sidebar {
+    float: right; padding: 20px 15px;
+    border: 1px solid #ddd; border-radius: 15px;
+}
+#wrap main #main_wrap #sticky_sidebar h1 {
+    font-size: 1.13rem; font-weight: 500; padding-bottom: 18px; border-bottom: 1px solid #ddd;
+}
+#wrap main #main_wrap #sticky_sidebar .side_info {
+    display: flex; flex-flow: column; gap: 8px;
+    padding: 15px 0; border-bottom: 1px solid #ddd;
+}
+#wrap main #main_wrap #sticky_sidebar .side_info dl {
+    display: flex; justify-content: space-between;
+}
+#wrap main #main_wrap #sticky_sidebar .side_info dt,
+#wrap main #main_wrap #sticky_sidebar .side_info dd {font-size: 0.88rem;}
+#wrap main #main_wrap #sticky_sidebar .side_info .change_btn {
+    background-color: #f0f0f0; padding: 12px 0; border-radius: 10px;
+}
+#wrap main #main_wrap #sticky_sidebar .party {
+    padding: 15px; border-bottom: 1px solid #ddd;
+    display: flex; flex-flow: column; gap: 8px;
+}
+#wrap main #main_wrap #sticky_sidebar .party .party_count .adult_detail, 
+#wrap main #main_wrap #sticky_sidebar .party .party_count .kid_detail, 
+#wrap main #main_wrap #sticky_sidebar .party .party_count .baby_detail {display: flex; align-items: center; justify-content: space-between;}
+#wrap main #main_wrap #sticky_sidebar .party .party_count .counter {
+    display: flex; align-items: center; margin-top: 4px;
+}
+#wrap main #main_wrap #sticky_sidebar .party .party_count .counter .count {width: 20px; text-align: center;}
+#wrap main #main_wrap #sticky_sidebar .dc {
+    padding: 15px 0; display: flex; flex-flow: column; gap: 6px;
+    border-bottom: 1px solid #ddd;
+}
+#wrap main #main_wrap #sticky_sidebar .dc dl {display: flex; justify-content: space-between;}
+#wrap main #main_wrap #sticky_sidebar .dc .dc_info dd {text-decoration: underline;}
+#wrap main #main_wrap #sticky_sidebar .price_reserv {padding: 15px 0; display: flex; flex-flow: column; gap: 12px; text-align: right;}
+#wrap main #main_wrap #sticky_sidebar .price_reserv .price {font-size: 1.38rem; font-weight: 500; text-align: right;}
+#wrap main #main_wrap #sticky_sidebar .price_reserv .point {}
+#wrap main #main_wrap #sticky_sidebar .price_reserv .point a {height: 100%; display: inline-block;}
+#wrap main #main_wrap #sticky_sidebar .price_reserv .point p {font-size: 0.75rem;display: inline-block;}
+#wrap main #main_wrap #sticky_sidebar .price_reserv .reservation_btn {
+    padding: 12px 0; background-color:#446CFF ;
+    border-radius: 10px; color: #fff;
+}
+#wrap main #main_wrap #sticky_sidebar .price_reserv .cs_info {display: flex; gap:4px;margin: 0 auto;}
+/* ---------------------------------------------------------------------------main wrap시작 */
+#wrap main #main_wrap #main_left .main_info .detail_title .category {display: flex;}
+#wrap main #main_wrap #main_left .main_info .detail_title h1 {font-size: 1.75rem; font-weight:500;}
