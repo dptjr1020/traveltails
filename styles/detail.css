@@ -1,5 +1,6 @@
 #wrap header {border-bottom: 1px solid #ddd; margin-bottom: 20px;}
 #wrap header #head_contents .head_left #gnb li a {color: #000;}
+#wrap header #head_contents .head_right a img {filter: invert(100%);}
 /* ----------------------------------------------------------------sticky sidebar 시작 */
 #wrap main #main_wrap {max-width: 1440px; margin: 0 auto;}
 #wrap main #main_wrap #sticky_sidebar {
@@ -108,8 +109,8 @@
 }
 #wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide
 #wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .review_top .star_point {display: flex;}
-#wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .review_top .star_point .star {display: flex;}
-#wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .review_top .star img {scale: 0.8;}
+#wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .review_top .star_point .star {display: flex; gap: 2px;}
+#wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .review_top .star_point .star img {width: 12px; height: 12px;}
 #wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .review_top .star p {font-size: 0.82rem;}
 #wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .review_top > p {
     font-size: 0.82rem; line-height: 1.5;margin: 8px 0; display: -webkit-box;
