@@ -1,5 +1,8 @@
-#wrap header {position: absolute; width: 100%; z-index: 100;}
-#wrap header #head_contents {background-color: rgba(206, 206, 206, 0.8);}
+#wrap header {
+    position: sticky; top:0;
+    width: 100%; z-index: 100;background-color: rgba(206, 206, 206, 1);
+}
+#wrap header #head_contents {}
 /* -----------------------------------------------------------------------히어로배너 */
 #wrap main .hero_wrap {
     height:480px; width: 100%;

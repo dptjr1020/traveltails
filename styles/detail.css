@@ -60,7 +60,7 @@
 #wrap main #main_wrap #main_left .main_info .info_top {display: flex; align-items: end; justify-content: space-between;}
 #wrap main #main_wrap #main_left .main_info .detail_title .category {display: flex; margin-bottom: 12px;}
 #wrap main #main_wrap #main_left .main_info .detail_title .category a {font-size: 0.75rem;}
-#wrap main #main_wrap #main_left .main_info .detail_title h1 {font-size: 1.39rem; font-weight:600;}
+#wrap main #main_wrap #main_left .main_info .detail_title h1 {font-size: 1.39rem; font-weight:600;line-height: 1.34;}
 #wrap main #main_wrap #main_left .main_info .theme_level {
     display: grid; gap: 6px;
     grid-template-areas:
