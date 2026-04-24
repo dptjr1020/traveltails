@@ -10,12 +10,17 @@ Any resemblance to real-world commercial sites is purely for design practice.
     background-color: #2251FF;
 }
 #wrap header {}
+#wrap header #head_contents .head_right a:nth-child(1) img {scale: 1.1;}
+#wrap header #head_contents .head_right a:nth-child(2) img {scale: 1.2;}
+#wrap header #head_contents .head_right a img {filter: invert(100%);}
 #wrap header.scroll {
-    position: sticky; top:0; background-color: #000;
+    position: sticky; top:0; background-color: #fff;
 }
+#wrap header.scroll #head_contents .head_left #gnb li a {color: #000;}
+#wrap header.scroll #head_contents .head_right a img {filter: invert(0);}
 #wrap header #head_contents {
     display:flex; flex-flow:row nowrap; justify-content: space-between; align-items: center;
-    padding: 0 240px; height: 70px; position: relative;
+    width:1440px; margin:0 auto; height: 70px; position: relative;
 }
 #wrap header #head_contents .head_left {
     display: flex; gap: 50px;
@@ -58,7 +63,7 @@ Any resemblance to real-world commercial sites is purely for design practice.
 #wrap header #head_contents .head_right .schedule img {scale: 1.1;}
 /* -----------------------------------------------------컨텐츠 배너 기본 */
 #wrap .contents {width: 1440px; margin:0 auto 120px;}
-#wrap .contents h1 {font-size: 2.13rem; font-weight: 600; text-align: center; margin-bottom: 50px;}
+#wrap .contents h1 {font-size: 1.88rem; font-weight: 600; text-align: center; margin-bottom: 50px;}
 /* ----------------------------------------------------푸터 공통 */
 #wrap footer {
     width: 100%; padding: 50px 240px; background-color: #000;

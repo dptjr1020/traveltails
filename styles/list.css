@@ -19,7 +19,7 @@
 #wrap main .jp_hot .city_wrap li a img {transition: 0.3s;}
 #wrap main .jp_hot .city_wrap li a:hover img {filter: brightness(0.8);}
 #wrap main .jp_hot .city_wrap li a {text-align: center;}
-#wrap main .jp_hot .city_wrap li a h2 {font-size: 1.13rem; font-weight: 500; margin-top: 8px;}
+#wrap main .jp_hot .city_wrap li a h2 {font-size: 1.13rem; font-weight: 600; margin-top: 8px;}
 /* -----------------------------------------------------------------상단 카드 스와이프배너 */
 #wrap main .card_bnr {}
 #wrap main .card_bnr .swiper-wrapper {}
@@ -32,7 +32,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.2);
     z-index: 1;
 }
 #wrap main .card_bnr .swiper-wrapper .swiper-slide:nth-child(1) a {background-image: url(../images/list_pg/card1.png);}
@@ -46,9 +46,9 @@
 #wrap main .card_bnr .swiper-wrapper .swiper-slide:nth-child(9) a {background-image: url(../images/list_pg/card9.png);}
 #wrap main .card_bnr .swiper-wrapper .swiper-slide:nth-child(10) a {background-image: url(../images/list_pg/card10.png);}
 #wrap main .card_bnr .swiper-wrapper .swiper-slide a span,
-#wrap main .card_bnr .swiper-wrapper .swiper-slide a p {color: #fff; line-height: 1.5; font-weight: 500; position: relative; z-index: 5;}
-#wrap main .card_bnr .swiper-wrapper .swiper-slide a span {font-size: 1.52rem; display: inline-block;}
-#wrap main .card_bnr .swiper-wrapper .swiper-slide a p {font-size: 1.21rem;}
+#wrap main .card_bnr .swiper-wrapper .swiper-slide a p {color: #fff; line-height: 1.5;position: relative; z-index: 5;}
+#wrap main .card_bnr .swiper-wrapper .swiper-slide a span {font-size: 1.40rem; font-weight: 600; display: inline-block; margin-bottom: 6px;}
+#wrap main .card_bnr .swiper-wrapper .swiper-slide a p {font-size: 0.88rem;}
 /* -------------------------------------------------------------------------요즘 뜨는 여행지 */
 #wrap main .recent_hotspot {width: 1440px;}
 #wrap main .recent_hotspot .hotspot_list {display: flex; gap: 20px;}
