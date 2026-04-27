@@ -1,6 +1,6 @@
 #wrap header {border-bottom: 1px solid #ddd; margin-bottom: 20px;}
 #wrap header #head_contents .head_left #gnb li a {color: #000;}
-#wrap header #head_contents .head_right a img {filter: invert(100%);}
+#wrap header #head_contents .head_right a img {filter: invert(0);}
 /* ----------------------------------------------------------------sticky sidebar 시작 */
 #wrap main #main_wrap {max-width: 1440px; margin: 0 auto;}
 #wrap main #main_wrap #sticky_sidebar {
@@ -25,7 +25,7 @@
     font-size: 0.88rem;
 }
 #wrap main #main_wrap #sticky_sidebar .party {
-    padding: 15px; border-bottom: 1px solid #ddd;
+    padding: 15px 0; border-bottom: 1px solid #ddd;
     display: flex; flex-flow: column; gap: 8px;
 }
 #wrap main #main_wrap #sticky_sidebar .party .party_count h2,
@@ -83,13 +83,27 @@
 }
 #wrap main #main_wrap #main_left .main_info .tags .suggest {color:#FF9F00;border: 1px solid #FF9F00;}
 /* ------------------------------------------------상단 이미지 스와이퍼 */
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper {}
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide {width: 521px !important;}
 #wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .slide2,
 #wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .slide4,
-#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .slide6 {width:fit-content;}
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .slide6 {width: 240px;}
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .slide2 .photos,
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .slide4 .photos,
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .slide6 .photos {
+    display: grid; grid-template-areas:
+        "photo1 photo2"
+        "photo3 photo4"
+    ; gap: 18px;
+}
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos .ph1 {grid-area: 'photo1';}
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos .ph2 {grid-area: 'photo2';}
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos .ph3 {grid-area: 'photo3';}
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos .ph4 {grid-area: 'photo4';}
 #wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide img {border-radius: 30px;}
-#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos {width: max-content;}
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos {height: 501px; width: max-content;}
 #wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos .photo_review {
-    position: relative;
+    position: relative; width: 241px;
 }
 #wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos .photo_review p {
     position: absolute; top: 20px; left: 20px; font-size: 0.75rem; background-color: #fff;
@@ -107,8 +121,8 @@
     padding: 18px; background: #F2F3F8; border-radius: 15px; height: 100%;
     display: flex; flex-flow: column; justify-content: space-between;
 }
-#wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide
-#wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .review_top .star_point {display: flex;}
+#wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide {}
+#wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .review_top .star_point {display: flex; align-items: center; gap: 6px;}
 #wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .review_top .star_point .star {display: flex; gap: 2px;}
 #wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .review_top .star_point .star img {width: 12px; height: 12px;}
 #wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .review_top .star p {font-size: 0.82rem;}
@@ -162,7 +176,10 @@
 #wrap main #main_wrap #main_left .schedule {border-top: 1px solid #ddd; padding: 40px 0;}
 #wrap main #main_wrap #main_left .schedule h2 {font-size: 1.13rem; font-weight: 600; margin-bottom: 15px;}
 #wrap main #main_wrap #main_left .schedule .schedule_img_view {
-    max-height: 400px; overflow: hidden;
+    height: 400px; overflow: hidden;
+}
+#wrap main #main_wrap #main_left .schedule .schedule_img_view.active {
+    height: unset;
 }
 #wrap main #main_wrap #main_left .schedule .schedule_img .view_more::before {}
 #wrap main #main_wrap #main_left .schedule .schedule_img .view_more {

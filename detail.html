@@ -26,7 +26,7 @@
         <header>
             <div id="head_contents">
                 <div class="head_left">
-                    <h1 class="logo"><a href="#"><img src="./images/common/logo.png" alt="트래블 테일즈"></a></h1>
+                    <h1 class="logo"><a href="./index.html"><img src="./images/common/logo.png" alt="트래블 테일즈"></a></h1>
                     <ul id="gnb">
                         <li><a href="#">해외여행</a>
                             <ul class="lnb">
@@ -248,12 +248,20 @@
                                 </div>
                                 <div class="swiper-slide slide2">
                                     <div class="photos">
-                                        <div class="photo_review">
+                                        <div class="photo_review ph1">
                                             <img src="./images/detail/top_img2.png" alt="">
                                             <p>후기사진</p>
                                         </div>
-                                        <div class="photo_review">
+                                        <div class="photo_review ph2">
                                             <img src="./images/detail/top_img3.png" alt="">
+                                            <p>후기사진</p>
+                                        </div>
+                                        <div class="photo_review ph3">
+                                            <img src="./images/detail/Rectangle 106.png" alt="">
+                                            <p>후기사진</p>
+                                        </div>
+                                        <div class="photo_review ph4">
+                                            <img src="./images/detail/Rectangle 107.png" alt="">
                                             <p>후기사진</p>
                                         </div>
                                     </div>
@@ -263,11 +271,17 @@
                                 </div>
                                 <div class="swiper-slide slide4">
                                     <div class="photos">
-                                        <div class="photo_review">
+                                        <div class="photo_review ph1">
                                             <img src="./images/detail/top_img6.png" alt="">
                                         </div>
-                                        <div class="photo_review">
+                                        <div class="photo_review ph2">
                                             <img src="./images/detail/top_img7.png" alt="">
+                                        </div>
+                                        <div class="photo_review ph3">
+                                            <img src="./images/detail/Rectangle 108.png" alt="">
+                                        </div>
+                                        <div class="photo_review ph4">
+                                            <img src="./images/detail/Rectangle 109.png" alt="">
                                             <p>후기사진</p>
                                         </div>
                                     </div>
@@ -435,25 +449,25 @@
                     <div class="mid_nav">
                         <ul class="nav_wrap">
                             <li class="active">
-                                <a href="#">
+                                <a href="#" data-index="0">
                                     <img src="./images/detail/flag.png" alt="">
                                     <p>코스</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" data-index="1">
                                     <img src="./images/detail/clock.png" alt="">
                                     <p>만나는 시간</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" data-index="2">
                                     <img src="./images/detail/check.png" alt="">
                                     <p>포함·불포함사항</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" data-index="3">
                                     <img src="./images/detail/nav_calendar.png" alt="">
                                     <p>환불정책</p>
                                 </a>
@@ -461,91 +475,93 @@
                         </ul>
                     </div>
                     <div class="item_detail"></div>
-                    <div class="schedule">
-                        <h2>일정</h2>
-                        <div class="schedule_img">
-                            <div class="schedule_img_view">
-                                <img src="./images/detail/schedule22.png" alt=""><!-- -----------------------일정 이미지로 첨부 -->
+                    <div id="info_wrap">
+                        <div class="schedule">
+                            <h2>일정</h2>
+                            <div class="schedule_img">
+                                <div class="schedule_img_view">
+                                    <img src="./images/detail/schedule22.png" alt=""><!-- -----------------------일정 이미지로 첨부 -->
+                                </div>
+                                <button type="button" class="view_more">자세히 보기 </button>
                             </div>
-                            <button type="button" class="view_more">자세히 보기 </button>
-                        </div>
-                        <!-- <div class="schedule_detail day1">
-                            <div class="schedule_top">
-                                <p>Day1 낯선 도시와의 첫 인사</p>
-                                <div class="flight_info">
-                                    <div class="leave_info">
-                                        <span>인천출발</span>
-                                        <span>11:30</span>
-                                        <span>2026.05.05(화)</span>
-                                    </div>
-                                    <div class="flight_img">
-                                        <span></span>
-                                    </div>
-                                    <div class="arrive_onfi">
-                                        <span>오키나와 도착</span>
-                                        <span>14:00</span>
-                                        <span>2026.05.05(화)</span>
+                            <!-- <div class="schedule_detail day1">
+                                <div class="schedule_top">
+                                    <p>Day1 낯선 도시와의 첫 인사</p>
+                                    <div class="flight_info">
+                                        <div class="leave_info">
+                                            <span>인천출발</span>
+                                            <span>11:30</span>
+                                            <span>2026.05.05(화)</span>
+                                        </div>
+                                        <div class="flight_img">
+                                            <span></span>
+                                        </div>
+                                        <div class="arrive_onfi">
+                                            <span>오키나와 도착</span>
+                                            <span>14:00</span>
+                                            <span>2026.05.05(화)</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            div.
-                            <div class="hotel_meal">
-                                <dl class="hotel">
-                                    <dt>숙박</dt>
-                                    <dd>출발 3일 전까지 확정 호텔을 SMS를 통해 안내드리겠습니다. -미정</dd>
-                                </dl>
-                                <dl class="meal">
-                                    <dt>식사</dt>
-                                    <dd>
-                                        <ul class="meal_detail">
-                                            <li><span>조식</span>X</li>
-                                            <li><span>중식</span>X</li>
-                                            <li><span>석식</span>호텔 내 레스토랑</li>
-                                        </ul>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </div> -->
-                    </div>
-                    <div class="meeting_time">
-                        <div class="time">
-                            <h2>만나는 시간</h2>
-                            <p>오전 9시</p>
+                                div.
+                                <div class="hotel_meal">
+                                    <dl class="hotel">
+                                        <dt>숙박</dt>
+                                        <dd>출발 3일 전까지 확정 호텔을 SMS를 통해 안내드리겠습니다. -미정</dd>
+                                    </dl>
+                                    <dl class="meal">
+                                        <dt>식사</dt>
+                                        <dd>
+                                            <ul class="meal_detail">
+                                                <li><span>조식</span>X</li>
+                                                <li><span>중식</span>X</li>
+                                                <li><span>석식</span>호텔 내 레스토랑</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div> -->
                         </div>
-                        <div class="spot">
-                            <h2>만나는 장소</h2>
-                            <p>인천 국제공항 제1터미널 3층 N카운터</p>
-                        </div>
-                    </div>
-                    <div class="check_list">
-                        <h2>포함·불포함사항</h2>
-                        <div class="include">
-                            <h3>포함사항</h3>
-                            <div class="list">
-                                <p>왕복 항공비</p>
-                                <p>3박4일 숙박비 (1인 여행자 독실 신청 시 200,000원 추가비용 발생)</p>
-                                <p>일정표 상 표기된 식사 + 관광지 입장료</p>
-                                <p>동행가이드 경비</p>
+                        <div class="meeting_time">
+                            <div class="time">
+                                <h2>만나는 시간</h2>
+                                <p>오전 9시</p>
+                            </div>
+                            <div class="spot">
+                                <h2>만나는 장소</h2>
+                                <p>인천 국제공항 제1터미널 3층 N카운터</p>
                             </div>
                         </div>
-                        <div class="not_include">
-                            <h3>불포함사항</h3>
-                            <div class="list">
-                                <p>일정표 상 표기가 안 되어있는 식사</p>
-                                <p>기타 개인경비</p>
+                        <div class="check_list">
+                            <h2>포함·불포함사항</h2>
+                            <div class="include">
+                                <h3>포함사항</h3>
+                                <div class="list">
+                                    <p>왕복 항공비</p>
+                                    <p>3박4일 숙박비 (1인 여행자 독실 신청 시 200,000원 추가비용 발생)</p>
+                                    <p>일정표 상 표기된 식사 + 관광지 입장료</p>
+                                    <p>동행가이드 경비</p>
+                                </div>
+                            </div>
+                            <div class="not_include">
+                                <h3>불포함사항</h3>
+                                <div class="list">
+                                    <p>일정표 상 표기가 안 되어있는 식사</p>
+                                    <p>기타 개인경비</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="refund">
-                        <h2>취소·환불규정</h2>
-                        <div class="refund_txt">
-                            <p>본 상품은 국외여행 표준약관 제6조(특약)에 따라 일반 소비자분쟁해결기준과 다른 취소수수료가 적용됩니다.<br>예약 취소 전 규정을 반드시 확인해 주세요.</p>
-                            <div class="refund_amount">
-                                <span>-여행시작 7일 전까지 통보시 : 여행요금 전액 환불</span>
-                                <span>-여행시작 3일 전까지 통보시 : 상품 요금의 50% 공제</span>
-                                <span>-여행시작 당일까지 통보시 : 취소/환불 불가</span>
+                        <div class="refund">
+                            <h2>취소·환불규정</h2>
+                            <div class="refund_txt">
+                                <p>본 상품은 국외여행 표준약관 제6조(특약)에 따라 일반 소비자분쟁해결기준과 다른 취소수수료가 적용됩니다.<br>예약 취소 전 규정을 반드시 확인해 주세요.</p>
+                                <div class="refund_amount">
+                                    <span>-여행시작 7일 전까지 통보시 : 여행요금 전액 환불</span>
+                                    <span>-여행시작 3일 전까지 통보시 : 상품 요금의 50% 공제</span>
+                                    <span>-여행시작 당일까지 통보시 : 취소/환불 불가</span>
+                                </div>
+                                <em>※ 여행일은 현지 시각 기준입니다.</em>
                             </div>
-                            <em>※ 여행일은 현지 시각 기준입니다.</em>
                         </div>
                     </div>
                     <div class="relative_item">
