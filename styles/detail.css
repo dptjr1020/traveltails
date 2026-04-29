@@ -6,7 +6,7 @@
 #wrap main #main_wrap #sticky_sidebar {
     float: right; padding: 20px 15px;
     border: 1px solid #ddd; border-radius: 15px;
-    position: sticky; top: 20px;
+    position: sticky; top: 20px; background-color: #fff; z-index: 500;
 }
 #wrap main #main_wrap #sticky_sidebar h1 {
     font-size: 1.13rem; padding-bottom: 18px; border-bottom: 1px solid #ddd;
@@ -172,6 +172,13 @@
 #wrap main #main_wrap #main_left .mid_nav .nav_wrap li a img {}
 #wrap main #main_wrap #main_left .mid_nav .nav_wrap li a p {}
 /* ----------------------------------------------------------------상품상세(이미지대체) */
+#wrap main #main_wrap #main_left .detail_img_wrap {}
+#wrap main #main_wrap #main_left .detail_img_wrap .item_detail {height: 400px; overflow: hidden;}
+#wrap main #main_wrap #main_left .detail_img_wrap .item_detail img {display:block; margin: 0 auto;}
+#wrap main #main_wrap #main_left .detail_img_wrap .view_more {
+    width: 100%; text-align: center; border: 1px solid #ddd; padding: 12px 0;
+    border-radius: 10px;
+}
 /* ----------------------------------------------------------------일정 */
 #wrap main #main_wrap #main_left .schedule {border-top: 1px solid #ddd; padding: 40px 0;}
 #wrap main #main_wrap #main_left .schedule h2 {font-size: 1.13rem; font-weight: 600; margin-bottom: 15px;}

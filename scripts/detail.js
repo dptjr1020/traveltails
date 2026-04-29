@@ -1,6 +1,7 @@
 const dtSwip = document.querySelector('.main_info .photo_wrap')
 const review = document.querySelector('.epilogue .review_wrap')
 const cateTitle = document.querySelectorAll('.nav_wrap li a')
+const cateActive = document.querySelectorAll('.nav_wrap li')
 const cateContent = document.querySelectorAll('#info_wrap > div')
 console.log(dtSwip, review, cateTitle, cateContent)
 
