@@ -2,7 +2,7 @@
 #wrap header #head_contents .head_left #gnb li a {color: #000;}
 #wrap header #head_contents .head_right a img {filter: invert(100%);}
 /* ----------------------------------------------------------------sticky sidebar 시작 */
-#wrap main #main_wrap {max-width: 1440px; margin: 0 auto;}
+#wrap main #main_wrap {max-width: 1440px; margin: 50px auto;}
 #wrap main #main_wrap #sticky_sidebar {
     float: right; padding: 20px 15px;
     border: 1px solid #ddd; border-radius: 15px;
@@ -73,7 +73,9 @@
 #wrap main #main_wrap #main_left .main_info .theme_level .theme2 {grid-area: 'city';}
 #wrap main #main_wrap #main_left .main_info .theme_level .theme3 {grid-area: 'activity';}
 #wrap main #main_wrap #main_left .main_info .theme_level .theme4 {grid-area: 'heal';}
-#wrap main #main_wrap #main_left .main_info .theme_level .theme p {font-size: 0.88rem;}
+#wrap main #main_wrap #main_left .main_info .theme_level .theme p {font-size: 0.88rem; width:60px;}
+#wrap main #main_wrap #main_left .main_info .theme_level .theme:nth-child(2) p,
+#wrap main #main_wrap #main_left .main_info .theme_level .theme:nth-child(4) p {font-size: 0.88rem; width:30px;}
 #wrap main #main_wrap #main_left .main_info .theme_level .theme .level {}
 #wrap main #main_wrap #main_left .main_info .theme_level .theme .level img{}
 #wrap main #main_wrap #main_left .main_info .tags {display: flex; gap: 8px; margin: 15px 0;}
@@ -83,14 +85,16 @@
 }
 #wrap main #main_wrap #main_left .main_info .tags .suggest {color:#FF9F00;border: 1px solid #FF9F00;}
 /* ------------------------------------------------상단 이미지 스와이퍼 */
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide > img {width: 100%; height: 100%;}
 #wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .slide2,
 #wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .slide4,
-#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .slide6 {width:fit-content;}
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .slide6 {width:250px !important;}
 #wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide img {border-radius: 30px;}
-#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos {width: max-content;}
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos {height:80% ;display: flex; flex-flow: column; gap: 20px;}
 #wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos .photo_review {
     position: relative;
 }
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos .photo_review img {}
 #wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos .photo_review p {
     position: absolute; top: 20px; left: 20px; font-size: 0.75rem; background-color: #fff;
     padding: 5px 8px; border-radius: 50px; color: #446CFF;

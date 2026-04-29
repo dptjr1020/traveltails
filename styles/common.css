@@ -31,7 +31,7 @@ Any resemblance to real-world commercial sites is purely for design practice.
 #wrap header #head_contents .head_left #gnb {
     display: flex; gap: 40px; align-items: center;
 }
-#wrap header #head_contents .head_left #gnb > li {height: 100%;}
+#wrap header #head_contents .head_left #gnb > li {height: 100%; position:relative;}
 #wrap header #head_contents .head_left #gnb > li > a {
     color: #fff; font-weight: 600; line-height: 41px;
     display: inline-block; height: 100%;
@@ -39,13 +39,15 @@ Any resemblance to real-world commercial sites is purely for design practice.
 #wrap header #head_contents .head_left #gnb > li > a:hover {
     color: #446CFF; transition: color 0.3s ease;
 }
-#wrap header #head_contents .head_left #gnb > li:nth-child(1) .lnb {
-    display: none;width: 100vw; height:35px;position: absolute; left: 0; bottom: -35px;
+/* #wrap header #head_contents .head_left #gnb > li:nth-child(1) .lnb {
+    display: flex;width: 100vw; height:35px;position: absolute; left: 0; bottom: -35px;
     gap:15px; background-color: #fff; padding-left: 360px; border-top: 1px solid #ddd;
-}
+} */
 #wrap header #head_contents .head_left #gnb > li .lnb {
-    display: none;
+    display: none;width: 100vw; height:35px;position: absolute; left: 0; bottom: -49.5px;
+    gap:15px; background-color: #fff; /* padding-left: 360px; */ border-top: 1px solid #ddd;
 }
+#wrap header #head_contents .head_left #gnb > li:nth-child() .lnb {}
 #wrap header #head_contents .head_left #gnb > li .lnb li {height: 100%;}
 #wrap header #head_contents .head_left #gnb > li .lnb li a {
     line-height: 35px;
