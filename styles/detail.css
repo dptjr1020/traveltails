@@ -1,12 +1,24 @@
 #wrap header {border-bottom: 1px solid #ddd; margin-bottom: 20px;}
 #wrap header #head_contents .head_left #gnb li a {color: #000;}
-#wrap header #head_contents .head_right a img {filter: invert(0);}
+#wrap header #head_contents .head_right a img {filter: invert(100%);}
 /* ----------------------------------------------------------------sticky sidebar 시작 */
-#wrap main #main_wrap {max-width: 1440px; margin: 50px auto;}
+#wrap main #main_wrap {max-width: 1440px; 
+    margin: 50px auto;
+    display: flex; /* 플롯 대신 플렉스 사용 */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 0 20px;}
 #wrap main #main_wrap #sticky_sidebar {
-    float: right; padding: 20px 15px;
-    border: 1px solid #ddd; border-radius: 15px;
-    position: sticky; top: 20px; background-color: #fff; z-index: 500;
+    width: 320px; /* 사이드바 너비 고정 */
+    flex-shrink: 0; /* 너비 보존 */
+    padding: 20px 15px;
+    border: 1px solid #ddd; 
+    border-radius: 15px;
+    position: sticky; 
+    top: 20px;
+    background-color: #fff;
+    z-index: 10;
 }
 #wrap main #main_wrap #sticky_sidebar h1 {
     font-size: 1.13rem; padding-bottom: 18px; border-bottom: 1px solid #ddd;
@@ -25,7 +37,7 @@
     font-size: 0.88rem;
 }
 #wrap main #main_wrap #sticky_sidebar .party {
-    padding: 15px 0; border-bottom: 1px solid #ddd;
+    padding: 15px; border-bottom: 1px solid #ddd;
     display: flex; flex-flow: column; gap: 8px;
 }
 #wrap main #main_wrap #sticky_sidebar .party .party_count h2,
@@ -57,16 +69,30 @@
 }
 #wrap main #main_wrap #sticky_sidebar .price_reserv .cs_info {display: flex; gap:4px;margin: 0 auto;}
 /* ---------------------------------------------------------------------------main wrap시작 */
-#wrap main #main_wrap #main_left {max-width: 1160px;}
-#wrap main #main_wrap #main_left .main_info .info_top {display: flex; align-items: end; justify-content: space-between;}
+#wrap main #main_wrap #main_left {
+    flex: 1; /* 사이드바를 제외한 남은 공간을 다 채움 */
+    max-width: 1160px;
+    min-width: 0; 
+}
+#wrap main #main_wrap #main_left .main_info .info_top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+}
+#wrap main #main_wrap #main_left .main_info .detail_title {
+    flex: 1;
+}
 #wrap main #main_wrap #main_left .main_info .detail_title .category {display: flex; margin-bottom: 12px;}
 #wrap main #main_wrap #main_left .main_info .detail_title .category a {font-size: 0.75rem;}
-#wrap main #main_wrap #main_left .main_info .detail_title h1 {font-size: 1.39rem; font-weight:600;line-height: 1.34;}
+#wrap main #main_wrap #main_left .main_info .detail_title h1 {font-size: 1.39rem; font-weight:600;line-height: 1.34; word-break: keep-all;}
 #wrap main #main_wrap #main_left .main_info .theme_level {
-    display: grid; gap: 6px;
+    display: grid;
+    gap: 6px;
     grid-template-areas:
         'nature activity'
         'city heal';
+    flex-shrink: 0
 }
 #wrap main #main_wrap #main_left .main_info .theme_level .theme {display: flex; align-items: center; gap: 4px;}
 #wrap main #main_wrap #main_left .main_info .theme_level .theme1 {grid-area: 'nature';}
@@ -78,49 +104,107 @@
 #wrap main #main_wrap #main_left .main_info .theme_level .theme:nth-child(4) p {font-size: 0.88rem; width:30px;}
 #wrap main #main_wrap #main_left .main_info .theme_level .theme .level {}
 #wrap main #main_wrap #main_left .main_info .theme_level .theme .level img{}
-#wrap main #main_wrap #main_left .main_info .tags {display: flex; gap: 8px; margin: 15px 0;}
+#wrap main #main_wrap #main_left .main_info .tags {
+    display: flex;
+    flex-wrap: wrap; /* 모바일에서 자동 줄바꿈 */
+    gap: 8px;
+    margin: 20px 0;
+}
 #wrap main #main_wrap #main_left .main_info .tags p {
     font-size: 0.75rem;color: #446CFF; border: 1px solid #446CFF;
     padding: 5px 8px; border-radius: 5px;
 }
 #wrap main #main_wrap #main_left .main_info .tags .suggest {color:#FF9F00;border: 1px solid #FF9F00;}
 /* ------------------------------------------------상단 이미지 스와이퍼 */
-#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .slide2,
-#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .slide4,
-#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .slide6 {width:fit-content;}
-#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide img {border-radius: 30px;}
-#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos {width: max-content;}
-#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos .photo_review {
-    position: relative; width: 241px;
+#wrap main #main_wrap #main_left .main_info .photo_wrap {
+    width:100%; overflow: hidden;
 }
-#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos .photo_review img {}
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper {
+    display: flex; align-items: stretch;
+}
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide {
+    height: auto;
+}
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 찌그러짐 방지 */
+    border-radius: 30px;
+}
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .slide6 .photos {}
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide img {border-radius: 30px;}
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 가로 2줄 */
+    grid-template-rows: repeat(2, 1fr);    /* 세로 2줄 */
+    gap: 15px; /* 사진 사이 간격 */
+    height: 100%;
+}
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos .photo_review {
+    position: relative;width: 100%;
+    height: 100%;
+}
+#wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos .photo_review img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
 #wrap main #main_wrap #main_left .main_info .photo_wrap .swiper-wrapper .swiper-slide .photos .photo_review p {
     position: absolute; top: 20px; left: 20px; font-size: 0.75rem; background-color: #fff;
     padding: 5px 8px; border-radius: 50px; color: #446CFF;
 }
 /* -------------------------------------------에필로그 */
-#wrap main #main_wrap #main_left .epilogue {margin: 15px 0;}
-#wrap main #main_wrap #main_left .epilogue .epilogue_top {display: flex; align-items: end; margin: 12px 0;}
-#wrap main #main_wrap #main_left .epilogue .epilogue_top img {scale: 0.8; position: relative; bottom:-5px;}
+#wrap main #main_wrap #main_left .epilogue {margin: 40px 0;}
+#wrap main #main_wrap #main_left .epilogue .epilogue_top {
+    display: flex;
+    align-items: center; /* end에서 center로 변경하여 정렬 최적화 */
+    margin-bottom: 20px;
+    gap: 1px;
+}
+#wrap main #main_wrap #main_left .epilogue .epilogue_top img {
+    width: 24px; 
+    height: auto;
+}
 #wrap main #main_wrap #main_left .epilogue .epilogue_top h2 {font-size: 1.13rem; font-weight: 600; margin-right: 6px;}
 #wrap main #main_wrap #main_left .epilogue .epilogue_top a em {font-size: 0.80rem;}
-#wrap main #main_wrap #main_left .epilogue .review_wrap {height: 160px;}
+#wrap main #main_wrap #main_left .epilogue .review_wrap {
+    height: auto; /* 고정 높이 해제 */
+    padding: 5px; /* 그림자 잘림 방지용 여백 */
+}
 #wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper {}
 #wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide {
-    padding: 18px; background: #F2F3F8; border-radius: 15px; height: 100%;
-    display: flex; flex-flow: column; justify-content: space-between;
+    padding: 20px;
+    background: #F2F3F8;
+    border-radius: 15px;
+    height: 200px; /* PC에서는 일정한 높이 유지 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s;
+    text-decoration: none; /* a태그 밑줄 제거 */
+    color: inherit;
+}
+#wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-slide:hover {
+    transform: translateY(-5px);
 }
 #wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide {}
-#wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .review_top .star_point {display: flex; align-items: center; gap: 6px;}
+#wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .review_top .star_point {display: flex; align-items: center; gap: 6px;margin-bottom: 12px;}
 #wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .review_top .star_point .star {display: flex; gap: 2px;}
 #wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .review_top .star_point .star img {width: 12px; height: 12px;}
 #wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .review_top .star p {font-size: 0.82rem;}
 #wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .review_top > p {
     font-size: 0.82rem; line-height: 1.5;margin: 8px 0; display: -webkit-box;
-    -webkit-line-clamp: 4; overflow: hidden; -webkit-box-orient:vertical ;
+    -webkit-line-clamp: 3; overflow: hidden; -webkit-box-orient:vertical ;
 }
-#wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .name_date {}
-#wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .name_date span { float:right;font-size: 0.82rem; color: #777;}
+#wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .name_date {
+    display: flex;
+    justify-content: space-between; /* float:right 대신 flex로 간격 벌리기 */
+    border-top: 1px solid #ddd;
+    padding-top: 12px;
+    margin-top: 10px;
+}
+#wrap main #main_wrap #main_left .epilogue .review_wrap .swiper-wrapper .swiper-slide .name_date span {font-size: 0.82rem; color: #777;}
 /* ---------------------------------------------------------------------------상품가 */
 #wrap main #main_wrap #main_left .price_info {margin-top: 28px;}
 #wrap main #main_wrap #main_left .price_info h2 {font-size: 1.13rem; font-weight: 600;}
@@ -153,8 +237,8 @@
     display: flex; justify-content: center;
     padding: 20px 0;
 }
-#wrap main #main_wrap #main_left .mid_nav .nav_wrap li:nth-child(1) a img {scale: 0.8;}
-#wrap main #main_wrap #main_left .mid_nav .nav_wrap li:nth-child(3) a img {scale: 0.8;}
+#wrap main #main_wrap #main_left .mid_nav .nav_wrap li:nth-child(2) a img {scale: 0.8;}
+#wrap main #main_wrap #main_left .mid_nav .nav_wrap li:nth-child(4) a img {scale: 0.8;}
 #wrap main #main_wrap #main_left .mid_nav .nav_wrap li.active {background-color: #446CFF; border: 1px solid #446CFF;}
 #wrap main #main_wrap #main_left .mid_nav .nav_wrap li.active a img {filter: invert(100%);}
 #wrap main #main_wrap #main_left .mid_nav .nav_wrap li.active a p {color: #fff;}
@@ -162,8 +246,13 @@
 #wrap main #main_wrap #main_left .mid_nav .nav_wrap li a p {}
 /* ----------------------------------------------------------------상품상세(이미지대체) */
 #wrap main #main_wrap #main_left .detail_img_wrap {}
-#wrap main #main_wrap #main_left .detail_img_wrap .item_detail {height: 400px; overflow: hidden;}
-#wrap main #main_wrap #main_left .detail_img_wrap .item_detail img {display:block; margin: 0 auto;}
+#wrap main #main_wrap #main_left .detail_img_wrap .item_detail {
+    height: 400px; overflow: hidden;
+}
+#wrap main #main_wrap #main_left .detail_img_wrap .item_detail.active {
+    height: auto; overflow: visible;
+}
+#wrap main #main_wrap #main_left .detail_img_wrap .item_detail img {display: block; margin: 0 auto;}
 #wrap main #main_wrap #main_left .detail_img_wrap .view_more {
     width: 100%; text-align: center; border: 1px solid #ddd; padding: 12px 0;
     border-radius: 10px;
@@ -175,7 +264,7 @@
     height: 400px; overflow: hidden;
 }
 #wrap main #main_wrap #main_left .schedule .schedule_img_view.active {
-    height: unset;
+    height: auto; overflow: visible;
 }
 #wrap main #main_wrap #main_left .schedule .schedule_img .view_more::before {}
 #wrap main #main_wrap #main_left .schedule .schedule_img .view_more {
@@ -257,12 +346,14 @@
     font-size: 0.88rem;display: inline-block; margin-top: 18px;
 }
 /* ------------------------------------------------------관련 추천 상품 */
-#wrap main #main_wrap #main_left .relative_item {width: 100%; padding: 40px 0 80px; border-top: 1px solid #ddd;}
+#wrap main #main_wrap #main_left .relative_item {width: 100%; }
 #wrap main #main_wrap #main_left .relative_item h2 {font-size: 1.13rem; font-weight: 600; margin-bottom: 20px;}
-#wrap main #main_wrap #main_left .relative_item .item_list {display: flex; gap: 15px;}
+#wrap main #main_wrap #main_left .relative_item .item_list {
+    display: flex; gap: 20px;
+}
 #wrap main #main_wrap #main_left .relative_item .item_list li {}
 #wrap main #main_wrap #main_left .relative_item .item_list li a {}
-#wrap main #main_wrap #main_left .relative_item .item_list li a img {border-radius: 30px;}
+#wrap main #main_wrap #main_left .relative_item .item_list li a img {width:100%;border-radius: 30px;}
 #wrap main #main_wrap #main_left .relative_item .item_list li a .list_title {margin: 10px 0 18px;}
 #wrap main #main_wrap #main_left .relative_item .item_list li a .list_title h3 {
     font-weight: 500;margin-bottom: 6px;
