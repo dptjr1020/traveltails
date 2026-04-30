@@ -10,7 +10,7 @@
     gap: 40px;
     padding: 0 20px;}
 #wrap main #main_wrap #sticky_sidebar {
-    width: 320px; /* 사이드바 너비 고정 */
+    width: 270px; /* 사이드바 너비 고정 */
     flex-shrink: 0; /* 너비 보존 */
     padding: 20px 15px;
     border: 1px solid #ddd; 
@@ -60,8 +60,11 @@
 #wrap main #main_wrap #sticky_sidebar .dc .dc_info dd {text-decoration: underline;}
 #wrap main #main_wrap #sticky_sidebar .price_reserv {padding: 15px 0; display: flex; flex-flow: column; gap: 12px; text-align: right;}
 #wrap main #main_wrap #sticky_sidebar .price_reserv .price {font-size: 1.28rem; font-weight: 600; text-align: right;}
-#wrap main #main_wrap #sticky_sidebar .price_reserv .point {}
-#wrap main #main_wrap #sticky_sidebar .price_reserv .point a {height: 100%; display: inline-block;}
+#wrap main #main_wrap #sticky_sidebar .price_reserv .point {
+    display: flex; align-items: center;justify-content: end; gap: 4px;
+}
+#wrap main #main_wrap #sticky_sidebar .price_reserv .point a {}
+#wrap main #main_wrap #sticky_sidebar .price_reserv .point a img {position: relative; top: -1px;}
 #wrap main #main_wrap #sticky_sidebar .price_reserv .point p {font-size: 0.72rem;display: inline-block;}
 #wrap main #main_wrap #sticky_sidebar .price_reserv .reservation_btn {
     padding: 12px 0; background-color:#446CFF ;

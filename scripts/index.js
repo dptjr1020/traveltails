@@ -20,6 +20,28 @@ console.log(pick, hero_tab, hero_video, continent_tab, continent_video, time, ev
 
 
 // -----------------------------------------header
+
+// index.js
+window.addEventListener('load', function() {
+    const mainHeader = document.querySelector('header');
+    const gnbLi = document.querySelectorAll('#gnb > li');
+    if (mainHeader) {
+        mainHeader.addEventListener('mouseenter', () => {
+            mainHeader.classList.add('on');
+        });
+        mainHeader.addEventListener('mouseleave', () => {
+            mainHeader.classList.remove('on');
+            gnbLi.forEach(li => {
+                if(li.children[1]) li.children[1].style.display = 'none';
+            });
+        });
+    }
+});
+
+
+
+
+
 window.addEventListener('scroll',function(){
     const vh = this.window.innerHeight;
     if(this.window.scrollY >= vh){

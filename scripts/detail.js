@@ -27,18 +27,12 @@ viewMoreBtns.forEach((btn) => {
             
             // 1. 클래스 토글 (딱딱 끊기며 접힘/펼침)
             imgBox.classList.toggle('active');
-
             // 2. 텍스트 변경
             this.textContent = isOpening ? '접기' : '자세히 보기';
-
             // 3. 접었을 때(펼쳐져 있다가 닫혔을 때)만 스크롤 고정 로직 실행
             if (!isOpening) {
-                // 버튼의 현재 위치를 가져와서 스크롤을 즉시 이동시킵니다.
-                // 'auto'로 설정하면 애니메이션 없이 딱 그 자리에 고정됩니다.
                 this.scrollIntoView({ block: 'end', behavior: 'auto' });
                 
-                // 만약 하단 여백이 너무 없다면 아래 코드를 대신 써보세요.
-                // window.scrollTo(0, window.scrollY + this.getBoundingClientRect().top - window.innerHeight + 100);
             }
         }
     });
@@ -48,7 +42,7 @@ viewMoreBtns.forEach((btn) => {
 // --- 1. 스크롤 감지 및 active 변경 (Intersection Observer) ---
 const observerOptions = {
     root: null,
-    rootMargin: '-15% 0px -70% 0px', // 화면 상단 15% 지점에 도달하면 변경
+    rootMargin: '-20% 0px -70% 0px', // 화면 상단 15% 지점에 도달하면 변경
     threshold: 0
 };
 
