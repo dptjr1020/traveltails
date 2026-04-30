@@ -54,7 +54,7 @@ header.on #head_contents .head_right a img {filter: invert(0) !important;}
     margin-bottom: 160px;
 }
 #wrap #hero_wrap .hero_list  {
-    width: 1560px;height:55px; display: flex; flex-flow: row nowrap;
+    width: 100%;height:55px; display: flex; flex-flow: row nowrap;
     justify-content: space-around;
     position: absolute; bottom: 0;left: 50%;transform: translateX(-50%);
     border-top-right-radius: 15px; z-index: 100;
@@ -92,7 +92,7 @@ header.on #head_contents .head_right a img {filter: invert(0) !important;}
 #wrap #hero_wrap .hero_v6 {}
 /* --------------------------------------------------------테마별 여행 */
 #wrap .theme_category {
-    display:flex; flex-flow:row nowrap; justify-content: space-around;
+    display:flex; flex-flow:row wrap; justify-content: space-around;
     margin-bottom:160px; padding: 0 50px;
 }
 #wrap .theme_category li {width: calc((100% / 6) - 24px);border-radius: 50px; overflow: hidden;}
@@ -184,9 +184,9 @@ header.on #head_contents .head_right a img {filter: invert(0) !important;}
 #wrap .continent_suggest h1 {text-align: center; margin-bottom: 30px;}
 #wrap .continent_suggest .continent_list {
     display: flex; justify-content: center;
-    width: 1100px; margin: 0 auto;
+    max-width: 1100px; width: 100%; margin: 0 auto;
 }
-#wrap .continent_suggest .continent_list li {width:calc(1100px / 5); text-align: center; position:relative;}
+#wrap .continent_suggest .continent_list li {width:calc(100% / 5); text-align: center; position:relative;}
 #wrap .continent_suggest .continent_list li a {
     font-size:1.13rem; display: block; width: 100%; height: 50px;
     line-height: 50px;
@@ -333,7 +333,7 @@ header.on #head_contents .head_right a img {filter: invert(0) !important;}
 #wrap .best_wrap {width: 100%;margin: 0 auto;}
 #wrap .best_wrap h1 {text-align: center; margin-bottom: 50px;}
 #wrap .best_wrap .best_list {
-    display: flex; width: 1440px; margin: 0 auto; gap: 20px;
+    display: flex; width:1440px; margin: 0 auto; gap: 20px;
 }
 #wrap .best_wrap .best_list li {width:100%; border-radius: 30px; overflow: hidden;}
 #wrap .best_wrap .best_list li:nth-child(1) .best_card {
@@ -410,7 +410,7 @@ header.on #head_contents .head_right a img {filter: invert(0) !important;}
     display: flex; gap: 20px;
 }
 #wrap .shorts .shorts_list li {
-    width: 100%; height: 570px; position: relative;
+    flex: 1; height: 570px; position: relative;
     padding: 20px;
 }
 #wrap .shorts .shorts_list li .thumb,

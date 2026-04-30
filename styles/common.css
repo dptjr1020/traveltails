@@ -10,6 +10,16 @@ Any resemblance to real-world commercial sites is purely for design practice.
     background-color: #2251FF;
 }
 #wrap header { position:relative;}
+#wrap header #head_contents .head_right .menu_btn {
+    display: none; width: 24px; height: 20px; position: relative;
+    background: none; border: none; cursor: pointer;
+}
+#wrap header #head_contents .head_right .menu_btn span {
+    position: absolute; left: 0; width: 100%; height: 2px; background: #000;
+}
+#wrap header #head_contents .head_right .menu_btn span:nth-child(1) {top: 0;}
+#wrap header #head_contents .head_right .menu_btn span:nth-child(2) {top: 9px;}
+#wrap header #head_contents .head_right .menu_btn span:nth-child(3) {bottom: 0;}
 #wrap header #head_contents .head_right a:nth-child(1) img {}
 #wrap header #head_contents .head_right a:nth-child(2) img {}
 #wrap header #head_contents .head_right a img {filter: invert(100%);}
@@ -20,7 +30,7 @@ Any resemblance to real-world commercial sites is purely for design practice.
 #wrap header.scroll #head_contents .head_right a img {filter: invert(0);}
 #wrap header #head_contents {
     display:flex; flex-flow:row nowrap; justify-content: space-between; align-items: center;
-    width:1440px; margin:0 auto; height: 70px;
+    max-width:1440px; margin:0 auto; height: 70px;
 }
 #wrap header #head_contents .head_left {
     display: flex; gap: 50px; height: 100%;
@@ -87,7 +97,7 @@ Any resemblance to real-world commercial sites is purely for design practice.
 #wrap .contents h1 {font-size: 1.88rem; font-weight: 600; text-align: center; margin-bottom: 50px;}
 /* ----------------------------------------------------푸터 공통 */
 #wrap footer {
-    width: 100%; padding: 50px 240px; background-color: #000;
+    width: 100%; padding: 50px 40px; background-color: #000;
 }
 #wrap footer .logo {margin-bottom: 20px;}
 #wrap footer .logo a {}

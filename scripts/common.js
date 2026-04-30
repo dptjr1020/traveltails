@@ -45,3 +45,25 @@ window.onload = function() {
         });
     }
 }
+
+const menuBtn = document.querySelector('.menu_btn');
+const gnb = document.querySelector('#gnb');
+
+menuBtn.addEventListener('click', () => {
+    gnb.classList.toggle('active');
+});
+
+const gnbItems = document.querySelectorAll('#gnb > li');
+
+gnbItems.forEach(item => {
+    const link = item.querySelector('a');
+    const lnb = item.querySelector('.lnb_bg');
+
+    if (lnb) {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            lnb.style.display =
+                lnb.style.display === 'block' ? 'none' : 'block';
+        });
+    }
+});

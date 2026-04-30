@@ -1,0 +1,104 @@
+@media (max-width:1024px){
+    #wrap header #head_contents {padding: 0 20px;}
+    #wrap header #head_contents .head_left { gap: 30px;}
+    #wrap header #head_contents .head_left #gnb {gap: 20px;}
+    #wrap header #head_contents .head_left #gnb > li > a { font-size: 0.9rem;}
+    #wrap .contents {padding: 0 20px; min-width: 800px;}
+    #wrap footer {padding: 40px 20px;}
+    #wrap footer .foot_top {flex-direction: column;gap: 10px;}
+    #wrap footer .foot_top .foot_sns {justify-content: flex-start;}
+    /* ----------------------------index.html */
+    #wrap #hero_wrap {margin-bottom: 120px;}
+    #wrap #hero_wrap .hero_list {height: 45px;}
+    #wrap #hero_wrap .hero_list li a {font-size: 0.8rem;line-height: 45px;}
+    #wrap #hero_wrap .hero_video .hero_txt {left: 40px;top: 60%;}
+    #wrap #hero_wrap .hero_video .hero_txt .hero_tag p {font-size: 1.1rem;}
+    #wrap #hero_wrap .hero_video .hero_txt h2 {font-size: 2rem;}
+    /* ---------------------------------------테마카테고리 */
+    #wrap .theme_category {padding: 0 20px;margin-bottom:120px;}
+    #wrap .theme_category li {width: calc((100% / 3) - 16px);margin-bottom: 16px;}
+    #wrap .theme_category li a {height: 160px;}
+    #wrap .theme_category li a p {line-height: 160px;font-size: 1rem;}
+    /* ----------------------------------------추천여행지 스와이퍼 */
+    #wrap .spring2026 h1 {margin-bottom: 40px;}
+    #wrap .spring2026 .swiper .swiper-wrapper .swiper-slide {height: 380px;}
+    #wrap .spring2026 .swiper .swiper-wrapper .swiper-slide-active {height: 420px;}
+    #wrap .spring2026 .pick .swiper-wrapper .swiper-slide .spring_txt {padding: 0 0 20px 20px;}
+    /* --------------------------------------------대륙별 추천 */
+    #wrap .continent_suggest .continent_list{padding:0 20px;}
+    #wrap .continent_suggest .continent_list li a{font-size:0.95rem;}
+    #wrap .continent_suggest .suggest_contents_bg{padding:40px 0;}
+    #wrap .continent_suggest .suggest_contents_bg .suggest_contents{gap:16px;}
+    #wrap .continent_suggest .suggest_contents_bg .suggest_contents .left_video{width:60%;height:420px;}
+    #wrap .continent_suggest .suggest_contents_bg .suggest_contents .right_list{width:40%;}
+    #wrap .continent_suggest .suggest_contents_bg .suggest_contents .left_video .video_txt{left:30px;bottom:100px;}
+    #wrap .continent_suggest .suggest_contents_bg .suggest_contents .left_video .video_txt h2{font-size:2rem;}
+    /* ------------------------------------------------------타임특가 */
+    #wrap #time_deal .time_contents{gap:30px;}
+    #wrap #time_deal .time_contents .swiper{width:60%;height:420px;margin:80px 0;}
+    #wrap #time_deal .time_contents .time_info{width:40%;height:420px;}
+    #wrap #time_deal .time_contents .time_info span{font-size:2rem;}
+    /* ---------------------------------------------------가장 많이 추천받은 여행지 */
+    #wrap .best_wrap .best_list{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:0 20px;}
+    #wrap .best_wrap .best_list li{width:100%;}
+    /* --------------------------------------------쇼츠 */
+    #wrap .shorts .shorts_list{gap:16px;padding:0 20px;}#wrap .shorts .shorts_list li{flex:1;height:480px;}
+}
+
+/* ------------------------------------------------모바일 */
+@media (max-width:740px) {
+    #wrap .contents {min-width: 320px;}
+    #wrap #hero_wrap {margin-bottom: 80px;}
+    #wrap #hero_wrap .hero_video {height: 60vh;}
+    #wrap #hero_wrap .hero_video video {height: 60vh;}
+    #wrap #hero_wrap .hero_video .hero_txt {left: 20px;top: 55%;transform: translateY(-50%);}
+    #wrap #hero_wrap .hero_video .hero_txt .hero_tag {flex-direction: column;gap: 4px;}
+    #wrap #hero_wrap .hero_video .hero_txt .hero_tag p {font-size: 0.9rem;}
+    #wrap #hero_wrap .hero_video .hero_txt h2 {font-size: 1.4rem;line-height: 1.3;}
+    #wrap #hero_wrap .hero_list {overflow-x: auto;justify-content: flex-start;gap: 0;height: 40px;}
+    #wrap #hero_wrap .hero_list li {width: auto;flex: 0 0 auto;}
+    #wrap #hero_wrap .hero_list li a {padding: 0 14px;font-size: 0.75rem;white-space: nowrap;line-height: 40px;}
+    /* -----------------------------------테마별 카테고리 */
+    #wrap .theme_category {padding: 0 16px;margin-bottom:80px;}
+    #wrap .theme_category li {width: calc((100% / 2) - 10px);margin-bottom: 12px;}
+    #wrap .theme_category li a {height: 120px;}
+    #wrap .theme_category li a p {line-height: 120px;font-size: 0.9rem;}
+    /* ----------------------------------------추천여행지 스와이퍼 */
+    #wrap .spring2026 h1 {margin-bottom: 30px;font-size: 1.4rem;}
+    #wrap .spring2026 .swiper .swiper-wrapper .swiper-slide {height: 300px;border-radius: 20px;}
+    #wrap .spring2026 .swiper .swiper-wrapper .swiper-slide-active {height: 320px;}
+    #wrap .spring2026 .pick .swiper-wrapper .swiper-slide .spring_txt {padding: 0 0 16px 16px;border-radius: 20px;}
+    #wrap .spring2026 .pick .swiper-wrapper .swiper-slide .spring_txt h2 {font-size: 1rem;}
+    #wrap .spring2026 .pick .swiper-wrapper .swiper-slide .spring_txt p {font-size: 0.75rem;}
+    /* -------------------------------------------------대륙별추천 */
+    /* 탭 */
+    #wrap .continent_suggest .continent_list{overflow-x:auto;justify-content:flex-start;padding:0 16px;}
+    #wrap .continent_suggest .continent_list li{flex:0 0 auto;width:auto;}
+    #wrap .continent_suggest .continent_list li a{padding:0 12px;font-size:0.85rem;white-space:nowrap;}
+    /* 콘텐츠 전체 세로 */
+    #wrap .continent_suggest .suggest_contents_bg{padding:30px 0;}
+    #wrap .continent_suggest .suggest_contents_bg .suggest_contents{flex-direction:column;padding:0 16px;}
+    /* 영상 */
+    #wrap .continent_suggest .suggest_contents_bg .suggest_contents .left_video{width:100%;height:260px;border-radius:20px;}
+    #wrap .continent_suggest .suggest_contents_bg .suggest_contents .left_video .video_txt{left:20px;bottom:40px;}
+    #wrap .continent_suggest .suggest_contents_bg .suggest_contents .left_video .video_txt h2{font-size:1.4rem;}
+    #wrap .continent_suggest .suggest_contents_bg .suggest_contents .left_video .video_txt p{font-size:0.9rem;}
+    /* 카드 */
+    #wrap .continent_suggest .suggest_contents_bg .suggest_contents .right_list{width:100%;}
+    #wrap .continent_suggest .suggest_contents_bg .suggest_contents .right_list .right_card{padding:16px;border-radius:20px;}
+    #wrap .continent_suggest .suggest_contents_bg .suggest_contents .right_list .right_card img{width:90px;}
+    #wrap .continent_suggest .suggest_contents_bg .suggest_contents .right_list .right_card .card_txt h2{font-size:1rem;}
+    /* ---------------------------------------------------------타임특가 */
+    /* 타임딜 세로 */
+    #wrap #time_deal .time_contents{flex-direction:column;padding:0 16px;gap:20px;}
+    #wrap #time_deal .time_contents .swiper{width:100%;height:260px;margin:40px 0 0;}
+    #wrap #time_deal .time_contents .time_info{width:100%;height:auto;}
+    #wrap #time_deal .time_contents .time_info span{font-size:1.6rem;}
+    #wrap #time_deal .time_contents .time_info .price_detail .price{font-size:1.6rem;}
+    #wrap #time_deal .time_contents .time_info .reservation_btn{width:100%;}
+    /* ----------------------------------------------------------가장 추천 많이 받은 여행지 */
+    #wrap .best_wrap .best_list{display:block;padding:0 16px;}
+    #wrap .best_wrap .best_list li{width:100%;margin-bottom:16px;}
+    /* ---------------------------------------------------------------쇼츠 */
+    #wrap .shorts .shorts_list{gap:12px;padding:0 16px;overflow-x:auto;scroll-snap-type:x mandatory;}#wrap .shorts .shorts_list li{flex:0 0 80%;height:520px;scroll-snap-align:center;}
+}

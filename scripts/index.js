@@ -60,6 +60,24 @@ const pickSwiper = new Swiper(pick,{
     centeredSlides:true,
     initialSlide:2,
     loop:true,
+    breakpoints: {
+        1280: {
+            slidesPerView: 5,
+            spaceBetween: 20
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 16
+        },
+        740: {
+            slidesPerView: 2,
+            spaceBetween: 12
+        },
+        0: {
+            slidesPerView: 1.2,
+            spaceBetween: 10
+        }
+    }
 })
 // --------------------------------------히어로배너
 for (let i=0; i<hero_tab.length; i++){

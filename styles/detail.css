@@ -1,6 +1,6 @@
 #wrap header {border-bottom: 1px solid #ddd; margin-bottom: 20px;}
 #wrap header #head_contents .head_left #gnb li a {color: #000;}
-#wrap header #head_contents .head_right a img {filter: invert(100%);}
+#wrap header #head_contents .head_right a img {filter: invert(0);}
 /* ----------------------------------------------------------------sticky sidebar 시작 */
 #wrap main #main_wrap {max-width: 1440px; 
     margin: 50px auto;
