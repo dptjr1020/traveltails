@@ -32,7 +32,7 @@ window.addEventListener('load', function() {
         mainHeader.addEventListener('mouseleave', () => {
             mainHeader.classList.remove('on');
             gnbLi.forEach(li => {
-                if(li.children[1]) li.children[1].style.display = 'none';
+                if(li.children[2]) li.children[2].style.display = 'none';
             });
         });
     }
