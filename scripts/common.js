@@ -52,7 +52,36 @@ const search = document.querySelector('.btm_right .recent_view')
 const searchBtn = document.querySelector('.head_right .search')
 const overlay = document.querySelector('#head_contents .search_overlay_bg')
 const closeBtn = document.querySelector('.search_overlay .close_btn')
+const header = document.querySelector('header')
+const searchBbtn = document.querySelector('.head_right .search')
 console.log(search)
+
+searchBbtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    header.classList.add('search_on');
+});
+
+// X 버튼 클릭 → 닫기
+closeBtn.addEventListener('click', () => {
+    header.classList.remove('search_on');
+});
+
+// index.js
+window.addEventListener('load', function() {
+    const mainHeader = document.querySelector('header');
+    const gnbLi = document.querySelectorAll('#gnb > li');
+    if (mainHeader) {
+        mainHeader.addEventListener('mouseenter', () => {
+            mainHeader.classList.add('on');
+        });
+        mainHeader.addEventListener('mouseleave', () => {
+            mainHeader.classList.remove('on');
+            gnbLi.forEach(li => {
+                if(li.children[2]) li.children[2].style.display = 'none';
+            });
+        });
+    }
+});
 
 searchBtn.addEventListener('click', (e) => {
     e.preventDefault();

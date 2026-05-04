@@ -13,7 +13,7 @@
 #gnb > li .lnb {
     background-color: #fff !important; /* lnb 배경도 흰색 유지 */
 }
-header.search_on {
+/* header.search_on {
     background-color: #fff !important;
     border-bottom: 1px solid #ddd;
 }
@@ -24,7 +24,12 @@ header.on {
     border-bottom: 1px solid #ddd;
 }
 #wrap header.on #head_contents .head_left #gnb > li > a {color: #000;}
-header.on #head_contents .head_right a img {filter: invert(0) !important;}
+header.on #head_contents .head_right a img {filter: invert(0) !important;} */
+#wrap header.scroll {
+    position: fixed; top:0; background-color: #fff;
+}
+#wrap header.scroll #head_contents .head_left #gnb li a {color: #000;}
+#wrap header.scroll #head_contents .head_right a img {filter: invert(0);}
 #gnb > li .lnb {
     background-color: #fff !important; /* lnb 배경도 흰색 유지 */
 }
@@ -333,7 +338,7 @@ header.on #head_contents .head_right a img {filter: invert(0) !important;}
 #wrap #time_deal .time_contents .time_info .price_info .price_detail .prev_price del {color: #777;}
 #wrap #time_deal .time_contents .time_info .price_info .price_detail .price {font-size: 2.13rem; font-weight: 500;}
 #wrap #time_deal .time_contents .time_info .reservation_btn {
-    font-size: 1.25rem; font-weight: 500; color:#fff; border-radius: 50px;
+    font-size: 1.25rem; font-weight: 500; color:#fff; border-radius: 50px; display: inline-block; text-align: center; line-height: 50px;
     width: 280px; height: 50px; background-color: #446CFF; transition: background-color 0.3s ease;
 }
 #wrap #time_deal .time_contents .time_info .reservation_btn:hover {
@@ -395,7 +400,7 @@ header.on #head_contents .head_right a img {filter: invert(0) !important;}
     line-height: 1.5;
 }
 #wrap .best_wrap .best_list li .best_card .best_txt .reservation_btn {
-    font-size: 1.13rem; font-weight: 600; color: #fff; display: block;
+    font-size: 1.13rem; font-weight: 600; color: #fff; display: block; text-align: center;
     width: 100%; background-color: #446CFF; padding: 15px 0; border-radius: 50px;
 }
 #wrap .best_wrap > p {text-align: center; margin-top: 25px; color: #444;}
@@ -454,7 +459,7 @@ header.on #head_contents .head_right a img {filter: invert(0) !important;}
     font-weight: 500;
 }
 #wrap .shorts .shorts_list li .shorts_txt .view_detail {
-    font-size: 1.25rem; font-weight: 500; color: #fff;
+    font-size: 1.25rem; font-weight: 500; color: #fff; display: inline-block; text-align: center;
     border: 1px solid #fff; width: 100%; padding: 8px 0;
     border-radius: 12px; background: rgba(0,0,0,0.4);
 }

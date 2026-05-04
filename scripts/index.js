@@ -14,48 +14,19 @@ const continent_tab = document.querySelectorAll('.continent_list li a');
 const continent_video = document.querySelectorAll('.suggest_contents_bg .suggest_contents')
 const time = document.querySelector('.time_contents .left_img')
 const eventbnr = document.querySelector('.event_bnr .event_swiper')
-const header = document.querySelector('header')
-const searchBbtn = document.querySelector('.head_right .search')
-console.log(pick, hero_tab, hero_video, continent_tab, continent_video, time, eventbnr, header);
+const headers = document.querySelector('header')
+
+console.log(pick, hero_tab, hero_video, continent_tab, continent_video, time, eventbnr, headers);
 
 
 // -----------------------------------------header
 
-searchBbtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    header.classList.add('search_on');
-});
-
-// X 버튼 클릭 → 닫기
-closeBtn.addEventListener('click', () => {
-    header.classList.remove('search_on');
-});
-
-// index.js
-window.addEventListener('load', function() {
-    const mainHeader = document.querySelector('header');
-    const gnbLi = document.querySelectorAll('#gnb > li');
-    if (mainHeader) {
-        mainHeader.addEventListener('mouseenter', () => {
-            mainHeader.classList.add('on');
-        });
-        mainHeader.addEventListener('mouseleave', () => {
-            mainHeader.classList.remove('on');
-            gnbLi.forEach(li => {
-                if(li.children[2]) li.children[2].style.display = 'none';
-            });
-        });
-    }
-});
-
-
-
 window.addEventListener('scroll',function(){
     const vh = this.window.innerHeight;
     if(this.window.scrollY >= vh){
-        header.classList.add('scroll')
+        headers.classList.add('scroll')
     }
-    else header.classList.remove('scroll')
+    else headers.classList.remove('scroll')
 })
 
 
