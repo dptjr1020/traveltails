@@ -48,6 +48,22 @@ window.onload = function() {
 
 const menuBtn = document.querySelector('.menu_btn');
 const gnb = document.querySelector('#gnb');
+const search = document.querySelector('.btm_right .recent_view')
+const searchBtn = document.querySelector('.head_right .search')
+const overlay = document.querySelector('#head_contents .search_overlay_bg')
+const closeBtn = document.querySelector('.search_overlay .close_btn')
+console.log(search)
+
+searchBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    overlay.classList.add('active');
+});
+
+// X 버튼 클릭 → 닫기
+closeBtn.addEventListener('click', () => {
+    overlay.classList.remove('active');
+});
+
 
 menuBtn.addEventListener('click', () => {
     gnb.classList.toggle('active');
@@ -66,4 +82,12 @@ gnbItems.forEach(item => {
                 lnb.style.display === 'block' ? 'none' : 'block';
         });
     }
+});
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    new Swiper('.btm_right .recent_view', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+    });
 });

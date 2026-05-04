@@ -4,7 +4,7 @@
 This CSS is part of a student project. 
 Any resemblance to real-world commercial sites is purely for design practice.
 */
-
+#wrap {overflow-x: hidden;}
 /* ------------------------------------------------------------헤더 공통(메인기준) */
 #wrap .reservation_btn:hover {
     background-color: #2251FF;
@@ -24,7 +24,7 @@ Any resemblance to real-world commercial sites is purely for design practice.
 #wrap header #head_contents .head_right a:nth-child(2) img {}
 #wrap header #head_contents .head_right a img {filter: invert(100%);}
 #wrap header.scroll {
-    position: sticky; top:0; background-color: #fff;
+    position: fixed; top:0; background-color: #fff;
 }
 #wrap header.scroll #head_contents .head_left #gnb li a {color: #000;}
 #wrap header.scroll #head_contents .head_right a img {filter: invert(0);}
@@ -61,7 +61,7 @@ Any resemblance to real-world commercial sites is purely for design practice.
 } */
 #wrap header #head_contents .head_left #gnb > li .lnb_bg {
     position: absolute; left: 0; top: 70px; border-top: 1px solid #ddd;
-    width: 100vw; display: none; background-color: #fff;
+    width: 100vw; display: none; background-color: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 #wrap header #head_contents .head_left #gnb > li .lnb_bg .lnb {
     width: 1200px; 
@@ -92,6 +92,77 @@ Any resemblance to real-world commercial sites is purely for design practice.
 #wrap header #head_contents .head_right .like img {}
 #wrap header #head_contents .head_right .schedule {}
 #wrap header #head_contents .head_right .schedule img {}
+#wrap header #head_contents .search_overlay_bg.active {
+    display: block;
+}
+#wrap header #head_contents .search_overlay_bg {
+    width: 100vw; height: 450px;
+    background-color: #fff; position: absolute;
+    left: 0; top: 70px;border-top: 1px solid #ddd;
+    padding: 30px 0;box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display:none; z-index:1;
+}
+#wrap header #head_contents .search_overlay_bg .search_overlay {
+    width: 1440px;margin: 0 auto; height: 100%; position: relative;
+}
+#wrap header #head_contents .search_overlay_bg .search_overlay .search_box {
+    display: flex; align-items: end; gap: 4px; width: max-content; margin: 0 auto;
+}
+#wrap header #head_contents .search_overlay_bg .search_overlay .search_box .search_area {
+    border-bottom: 1px solid #000; width: 300px;
+    padding: 4px;
+}
+#wrap header #head_contents .search_overlay_bg .search_overlay .close_btn {
+    position: absolute; top: 0; right: 0;
+}
+#wrap header #head_contents .search_overlay_bg .search_overlay .close_btn img {}
+#wrap header #head_contents .search_overlay_bg .search_overlay .search_box img {}
+#wrap header #head_contents .search_overlay_bg .search_overlay > img {}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm {
+    display: flex; height: 100%;
+    margin-top: 25px;
+}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_left {
+    display: flex; width: 720px;
+}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_left dl {
+    width: 360px;
+}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_left dl dt {
+    font-size: 1.08rem; font-weight: 600; margin-bottom: 15px;
+}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_left dl dd {
+    margin-bottom: 10px; font-size: 0.92rem;
+}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_right {
+    width: 720px;
+}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_right h2 {
+    font-size: 1.08rem; font-weight: 600;
+    margin-bottom: 15px;
+}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_right .swiper {}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_right .swiper .swiper-wrapper {}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_right .swiper .swiper-wrapper .swiper-slide {width: calc(100% / 4);}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_right .swiper .swiper-wrapper .swiper-slide a {}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_right .swiper .swiper-wrapper .swiper-slide a img {
+    height: 200px;border-radius: 20px;
+    margin-bottom: 4px;
+}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_right .swiper .swiper-wrapper .swiper-slide a .txt_box {}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_right .swiper .swiper-wrapper .swiper-slide a .txt_box .txt_top {margin-bottom: 14px;}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_right .swiper .swiper-wrapper .swiper-slide a .txt_box .txt_top h2 {
+    font-size: 1rem; font-weight: 500;
+}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_right .swiper .swiper-wrapper .swiper-slide a .txt_box .txt_bottom {}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_right .swiper .swiper-wrapper .swiper-slide a .txt_box .txt_bottom .price {}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_right .swiper .swiper-wrapper .swiper-slide a .txt_box .txt_bottom .review {
+    display: flex; align-items: center; gap: 6px;
+    margin-top: 6px;
+}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_right .swiper .swiper-wrapper .swiper-slide a .txt_box .txt_bottom .review img {height: 100%;}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_right .swiper .swiper-wrapper .swiper-slide a .txt_box .txt_bottom .review img p {}
+#wrap header #head_contents .search_overlay_bg .search_overlay .sb_btm .btm_right .swiper .swiper-wrapper .swiper-slide a .txt_box .txt_bottom .review img p span {}
 /* -----------------------------------------------------컨텐츠 배너 기본 */
 #wrap .contents {width: 1440px; margin:0 auto 120px;}
 #wrap .contents h1 {font-size: 1.88rem; font-weight: 600; text-align: center; margin-bottom: 50px;}

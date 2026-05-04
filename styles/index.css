@@ -2,13 +2,23 @@
     position: relative;
     margin: 0 auto;
 }
-#wrap header {position: fixed; width: 100%; z-index: 100;}
+#wrap header {position: fixed; width: 100%; z-index: 500;}
 #wrap main {}
 #wrap footer {}
 /* -------------------------------------------------------헤더 시작 */
 #wrap header #head_contents .head_left #gnb > li .lnb_bg {
     background-color:#fff;
 }
+
+#gnb > li .lnb {
+    background-color: #fff !important; /* lnb 배경도 흰색 유지 */
+}
+header.search_on {
+    background-color: #fff !important;
+    border-bottom: 1px solid #ddd;
+}
+#wrap header.search_on #head_contents .head_left #gnb > li > a {color: #000;}
+header.search_on #head_contents .head_right a img {filter: invert(0) !important;}
 header.on {
     background-color: #fff !important;
     border-bottom: 1px solid #ddd;
@@ -263,7 +273,7 @@ header.on #head_contents .head_right a img {filter: invert(0) !important;}
 #wrap .continent_suggest .suggest_contents_bg .suggest_contents .right_list .right_card .card_txt .price_arrow {}
 #wrap .continent_suggest .suggest_contents_bg .suggest_contents .right_list .right_card .card_txt .price_arrow .price {font-size: 1.26rem; font-weight: 500;}
 #wrap .continent_suggest .suggest_contents_bg .suggest_contents .right_list .right_card .card_txt .price_arrow .arrow {
-    float: right;
+    float: right; transform: scale(0.7);
 }
 
 /* -----------------------------------------------------------------------타임특가 */
@@ -425,7 +435,7 @@ header.on #head_contents .head_right a img {filter: invert(0) !important;}
 #wrap .shorts .shorts_list li .shorts_txt .view_count {
     position: absolute; background-color: rgba(0,0,0,0.3);
     padding: 8px 15px; border-radius: 15px; display: flex; align-items: center;
-    gap: 2px;
+    gap: 2px; z-index: 5;
 }
 #wrap .shorts .shorts_list li .shorts_txt .view_count img {width: 16px;}
 #wrap .shorts .shorts_list li .shorts_txt .view_count span {
@@ -436,7 +446,7 @@ header.on #head_contents .head_right a img {filter: invert(0) !important;}
 }
 #wrap .shorts .shorts_list li:hover .shorts_txt > img {opacity: 0;}
 #wrap .shorts .shorts_list li .shorts_txt .txt_btm {
-    position: absolute; bottom: 0; z-index: 200; width: 90%;
+    position: absolute; bottom: 0; z-index: 100; width: 90%;
     margin-bottom: 20px;
 }
 #wrap .shorts .shorts_list li .shorts_txt p {

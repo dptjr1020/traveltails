@@ -15,11 +15,21 @@ const continent_video = document.querySelectorAll('.suggest_contents_bg .suggest
 const time = document.querySelector('.time_contents .left_img')
 const eventbnr = document.querySelector('.event_bnr .event_swiper')
 const header = document.querySelector('header')
-
+const searchBbtn = document.querySelector('.head_right .search')
 console.log(pick, hero_tab, hero_video, continent_tab, continent_video, time, eventbnr, header);
 
 
 // -----------------------------------------header
+
+searchBbtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    header.classList.add('search_on');
+});
+
+// X 버튼 클릭 → 닫기
+closeBtn.addEventListener('click', () => {
+    header.classList.remove('search_on');
+});
 
 // index.js
 window.addEventListener('load', function() {
@@ -37,8 +47,6 @@ window.addEventListener('load', function() {
         });
     }
 });
-
-
 
 
 

@@ -1,7 +1,8 @@
 const cardWrap = document.querySelector('main .card_bnr');
+const keyword = document.querySelectorAll('.theme li a')
+const cards = document.querySelectorAll('.theme_item')
 
-
-console.log(cardWrap);
+console.log(cardWrap,keyword,cards);
 
 const card = new Swiper(cardWrap,{
     slidesPerView:4,
@@ -13,9 +14,6 @@ const card = new Swiper(cardWrap,{
 })
 
 // ------------------------------------키워드 테마
-const keyword = document.querySelectorAll('.theme li a')
-const cards = document.querySelectorAll('.theme_item')
-console.log(keyword, cards)
 
 for (let k of keyword){
     k.addEventListener('click',function(e){
